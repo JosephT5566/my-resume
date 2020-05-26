@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/my-resume.git/static/css/main.5f361e03.chunk.css",
-    "main.js": "/my-resume.git/static/js/main.7932c8c7.chunk.js",
-    "main.js.map": "/my-resume.git/static/js/main.7932c8c7.chunk.js.map",
-    "runtime-main.js": "/my-resume.git/static/js/runtime-main.92f40fcb.js",
-    "runtime-main.js.map": "/my-resume.git/static/js/runtime-main.92f40fcb.js.map",
-    "static/js/2.2141e1a8.chunk.js": "/my-resume.git/static/js/2.2141e1a8.chunk.js",
-    "static/js/2.2141e1a8.chunk.js.map": "/my-resume.git/static/js/2.2141e1a8.chunk.js.map",
-    "index.html": "/my-resume.git/index.html",
-    "precache-manifest.607d4e16deecb4bb775e67cb8471dcf8.js": "/my-resume.git/precache-manifest.607d4e16deecb4bb775e67cb8471dcf8.js",
-    "service-worker.js": "/my-resume.git/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/my-resume.git/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.2141e1a8.chunk.js.LICENSE.txt": "/my-resume.git/static/js/2.2141e1a8.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/my-resume.git/static/media/logo.5d5d9eef.svg"
+    "main.css": "/my-resume/static/css/main.5f361e03.chunk.css",
+    "main.js": "/my-resume/static/js/main.485f8ad4.chunk.js",
+    "main.js.map": "/my-resume/static/js/main.485f8ad4.chunk.js.map",
+    "runtime-main.js": "/my-resume/static/js/runtime-main.e17661cb.js",
+    "runtime-main.js.map": "/my-resume/static/js/runtime-main.e17661cb.js.map",
+    "static/js/2.2141e1a8.chunk.js": "/my-resume/static/js/2.2141e1a8.chunk.js",
+    "static/js/2.2141e1a8.chunk.js.map": "/my-resume/static/js/2.2141e1a8.chunk.js.map",
+    "index.html": "/my-resume/index.html",
+    "precache-manifest.057b2a2310f2c51397719e40130271bb.js": "/my-resume/precache-manifest.057b2a2310f2c51397719e40130271bb.js",
+    "service-worker.js": "/my-resume/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/my-resume/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.2141e1a8.chunk.js.LICENSE.txt": "/my-resume/static/js/2.2141e1a8.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/my-resume/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.92f40fcb.js",
+    "static/js/runtime-main.e17661cb.js",
     "static/js/2.2141e1a8.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.7932c8c7.chunk.js"
+    "static/js/main.485f8ad4.chunk.js"
   ]
 }
