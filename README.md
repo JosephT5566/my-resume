@@ -4,7 +4,7 @@
 2. `cd app-name`
 3. `npm start`
 4. `git init`
-5. `git remote add origin https://JosephT5566.github.io/app-name.git`
+5. `git remote add origin https://JosephT5566.github.io/app-name`
 6. `npm install gh-pages --save-dev`
 7. 在package.json中的script新增
 ```json
