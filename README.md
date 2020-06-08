@@ -1,3 +1,5 @@
+https://JosephT5566.github.io/my-resume
+
 ## How to build a React-app to github homepage
 
 1. `npx create-react-app app-name`
