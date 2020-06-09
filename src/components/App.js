@@ -6,6 +6,7 @@ import ReactDom from 'react-dom';
 
 import ResumeCard from './ResumeCard';
 import PersonalInfo from './cards/personalInfo';
+import Expertise from './cards/expertise';
 
 class App extends React.Component {
     render() {
@@ -13,6 +14,9 @@ class App extends React.Component {
             <div className="ui container">
                 <ResumeCard>
                     <PersonalInfo />
+                </ResumeCard>
+                <ResumeCard>
+                    <Expertise />
                 </ResumeCard>
             </div>
         );
