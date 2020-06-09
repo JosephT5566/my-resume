@@ -7,3 +7,17 @@
     padding: 0 25px;
     margin: 20px;
 }
+
+.socialLink {
+    margin-top: 20px;
+}
+
+.socialLink i
+{
+    font-size: 200%;
+}
+
+.socialLink i:hover
+{
+    cursor: pointer;
+}
