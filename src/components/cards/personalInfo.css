@@ -1,8 +1,8 @@
-.comment {
+#personalInfoContainer .comment {
     display: flex;
 }
 
-.content {
+#personalInfoContainer .content {
     width: 50%;
     padding: 0 25px;
     margin: 20px;
