@@ -12,7 +12,7 @@ class App extends React.Component {
         return (
             <div className="ui container">
                 <ResumeCard>
-                    <PersonalInfo/>
+                    <PersonalInfo />
                 </ResumeCard>
             </div>
         );
