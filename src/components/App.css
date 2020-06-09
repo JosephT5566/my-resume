@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Huninn';
+    src: local('FiraSans'), url(../assets/fonts/jf-openhuninn-1.1/jf-openhuninn-1.1.ttf) format('truetype');
+}
+
+* {
+    font-family: 'Huninn';
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Huninn';
+}
