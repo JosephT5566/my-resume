@@ -15,9 +15,11 @@
 .socialLink i
 {
     font-size: 200%;
+    color: CADETBLUE;
 }
 
 .socialLink i:hover
 {
     cursor: pointer;
+    color: #477678;
 }

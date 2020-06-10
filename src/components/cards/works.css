@@ -3,8 +3,17 @@
     margin: 20px;
 }
 
+#worksContainer .content span {
+    color: CADETBLUE;
+}
+
 #worksContainer .content span:hover {
     cursor: pointer;
+    color: #477678;
+}
+
+#worksContainer .content .transitionPanel {
+    color: black;
 }
 
 #worksContainer .transitionPanel {

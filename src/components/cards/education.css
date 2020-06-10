@@ -3,8 +3,18 @@
     margin: 20px;
 }
 
+#educationContainer .content span {
+    cursor: pointer;
+    color: CADETBLUE;
+}
+
 #educationContainer .content span:hover {
     cursor: pointer;
+    color: #477678;
+}
+
+#educationContainer .content .transitionPanel {
+    color: black;
 }
 
 #educationContainer .transitionPanel {
