@@ -3,6 +3,10 @@
     margin: 20px;
 }
 
+#worksContainer .content span:hover {
+    cursor: pointer;
+}
+
 .transitionPanel {
     width: 100%;
     height: 100px;
