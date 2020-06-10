@@ -3,7 +3,7 @@ import '../assets/fonts/jf-openhuninn-1.1/jf-openhuninn-1.1.ttf';
 
 import React from 'react';
 
-import ResumeCardList from './ResumeCard';
+import ResumeCardList from './ResumeCardList';
 
 class App extends React.Component {
     render() {
