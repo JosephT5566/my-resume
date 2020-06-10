@@ -2,3 +2,10 @@
     padding: 0 25px;
     margin: 20px;
 }
+
+.transitionPanel {
+    width: 100%;
+    height: 100px;
+    background: gray;
+    margin-top: 10px;
+}
