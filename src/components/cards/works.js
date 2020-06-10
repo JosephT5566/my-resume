@@ -26,9 +26,14 @@ class Works extends React.Component {
                             style={{ fontSize: '22px' }}
                         >
                             憶正科技 (MemoRight), 應用工程師, Oct 2016 ~ Mar 2017
-                            {this.state.visible ? (
+                            <CSSTransition
+                                classNames="cardTransition"
+                                in={this.state.visible}
+                                timeout={300}
+                                unmountOnExit
+                            >
                                 <div className="transitionPanel" />
-                            ) : null}
+                            </CSSTransition>
                         </span>
                     </p>
                     <p>
