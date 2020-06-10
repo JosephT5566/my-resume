@@ -7,7 +7,7 @@
     cursor: pointer;
 }
 
-.transitionPanel {
+#worksContainer .transitionPanel {
     width: 100%;
     height: 70px;
     margin: 0 30px;
@@ -15,12 +15,12 @@
     /* margin-top: 10px; */
 }
 
-.cardTransition-enter {
+#worksContainer .cardTransition-enter {
     height: 0px;
     opacity:0;
 }
 
-.cardTransition-enter-active {
+#worksContainer .cardTransition-enter-active {
     height: 70px;
     opacity: 1;
     transform: translateY(0%);
@@ -31,7 +31,7 @@
     height: 100px;
 } */
 
-.cardTransition-exit-active {
+#worksContainer .cardTransition-exit-active {
     height: 0px;
     opacity: 0;
     transform: translateY(0%);
