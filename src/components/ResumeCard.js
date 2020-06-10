@@ -3,6 +3,7 @@ import React from 'react';
 import PersonalInfo from './cards/personalInfo';
 import Expertise from './cards/expertise';
 import Works from './cards/works';
+import Education from './cards/education';
 
 class ResumeCard extends React.Component {
     render() {
@@ -22,6 +23,9 @@ class ResumeCardList extends React.Component {
                 </ResumeCard>
                 <ResumeCard>
                     <Works/>
+                </ResumeCard>
+                <ResumeCard>
+                    <Education/>
                 </ResumeCard>
             </div>
         );
