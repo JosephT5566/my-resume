@@ -95,3 +95,22 @@ example:
 ```
 
 `*-active` class代表想要用怎樣的動畫來表現，所以宣告出`transition`是很重要的，否則就不會出現想要的轉換效果。
+
+## How to get the `height` of hidden element, and set to animation CSS
+
+在網路上找到一篇[文章](https://medium.com/trabe/measuring-elements-in-react-6bf343b65347)提到解法
+
+底下[留言](https://github.com/gregfleury/react-utils/blob/master/measureElement.js)則提出了另一種方法: 利用`ReactDOM.render()`與`Promise`，先將要測試的hidden element append到一實體DOM上，再去獲取相關值，用非同步方式回傳
+
+example:
+
+```js
+measureElement(
+    <div style={ {width: '100px', height: '50px'} }></div>,
+    id
+).then( ({width, height, id}) => { console.log(width); } )
+
+// console: 50
+```
+
+但如何將獲取到的值(width)，回去設定到CSSTransition動畫的CSS參數中呢...
