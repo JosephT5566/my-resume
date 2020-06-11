@@ -39,6 +39,7 @@ class Works extends React.Component {
             <div id="worksContainer">
                 <div className="comment">
                     <h1>工作經歷</h1>
+                    <hr/>
                     <p>
                         <i className="circle icon"></i>
                         <span

@@ -7,5 +7,6 @@
 }
 
 #expertiseContainer .content {
-    width: 33%;
+    padding-right: 20px;
+    width: 30%;
 }

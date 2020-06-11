@@ -9,6 +9,7 @@ const intro = () => {
                     style={{ width: '66%', padding: '0 60px 0 0' }}
                 >
                     <h1>簡介</h1>
+                    <hr/>
                     我是Joseph曾俊霖，主要經歷為軟/韌體開發，擅長有邏輯地分析與解決問題，喜歡嘗試新的技術與方法。
                     <br />
                     參與過嵌入式系統產品的規劃與開發，在工作上多使用C開發維護driver，在解決問題的過程中，更深入了解系統底層的工作方式。
@@ -22,6 +23,7 @@ const intro = () => {
                 </div>
                 <div className="content interest" style={{ width: '33%' }}>
                     <h1>興趣</h1>
+                    <hr/>
                     <li>旅遊</li>
                     <li>攝影</li>
                     <li>滑雪</li>

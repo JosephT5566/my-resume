@@ -29,6 +29,7 @@ class Education extends React.Component {
             <div id="educationContainer">
                 <div className="comment">
                     <h1>學歷</h1>
+                    <hr/>
                     <p>
                         <i className="circle icon"></i>
                         <span

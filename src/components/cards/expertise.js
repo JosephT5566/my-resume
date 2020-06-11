@@ -9,6 +9,7 @@ const expertise = () => {
             <div className="comment">
                 <div className="content expertise">
                     <h1>language</h1>
+                    <hr />
                     <li>C</li>
                     <li>C#</li>
                     <li>Linux shell script</li>
@@ -16,17 +17,20 @@ const expertise = () => {
                     <li>PHP</li>
                     <li>JavaScript / jQuery / AJAX</li>
                 </div>
-                <div className="content">
+                <div className="content tool">
                     <h1>Tools & environment</h1>
+                    <hr />
                     <li>Visual Studio Code</li>
                     <li>Git</li>
                     <li>.Net Framework</li>
                     <li>React.js</li>
+                    <li>PHP</li>
                     <li>Ceedling</li>
                     <li>Qt</li>
                 </div>
-                <div className="content">
+                <div className="content os" style={{ width: '190px' }}>
                     <h1>OS</h1>
+                    <hr />
                     <li>Windows</li>
                     <li>Linux</li>
                 </div>
