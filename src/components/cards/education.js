@@ -43,11 +43,12 @@ class Education extends React.Component {
                                 unmountOnExit
                             >
                                 <div className="transitionPanel">
-                                    電機工程 · 系統與控制
-                                    <br />
-                                    論文：光學式捲帶料件記數系統 | 指導教授：許舜斌
-                                    <br />
-                                    利用清晰的影像，透過初步的影像處理運算，再配合設計的演算法、以及設計的測試環境實現元件的估算與記數。
+                                    <div style={ {fontWeight: 'bold'} }>電機所 · 系統與控制組 | 指導教授：許舜斌</div>
+                                    <div style={ {fontWeight: 'bold'} }>論文：光學式捲帶料件記數系統</div>
+                                    <div style={ {marginLeft: '20px'} }>在設計的測試環境上，利用清晰的捲帶盤影像，透過初步的影像處理運算，再配合設計的演算法實現元件的估算與記數。</div>
+                                    <li>孰悉影像處理演算法</li>
+                                    <li>透過 Matlab 驗證，在轉至 C++ 開發</li>
+                                    <li>透過 Qt 建立簡單使用者介面</li>
                                 </div>
                             </CSSTransition>
                         </span>
@@ -66,7 +67,7 @@ class Education extends React.Component {
                                 unmountOnExit
                             >
                                 <div className="transitionPanel">
-                                    電機工程
+                                    <div style={ {fontWeight: 'bold'} }>電機工程學系</div>
                                 </div>
                             </CSSTransition>
                         </span>

@@ -53,7 +53,8 @@ class Works extends React.Component {
                                 unmountOnExit
                             >
                                 <div className="transitionPanel">
-                                    Memory controller test with Magnum system
+                                    <li>孰悉 eMMC Spec</li>
+                                    <li>在 MAGNUM system 上開發及維護測試記憶體控制器的testing pattern (C)</li>
                                 </div>
                             </CSSTransition>
                         </span>
@@ -72,9 +73,9 @@ class Works extends React.Component {
                                 unmountOnExit
                             >
                                 <div className="transitionPanel">
-                                    Memory controller test with Magnum system
-                                    <br />
-                                    MP application development in C#
+                                    <li>在 MAGNUM system 上開發及維護測試記憶體控制器的testing pattern (C)</li>
+                                    <li>協助開發 eMMC MP Tool (C#)</li>
+                                    <li>在 Linux 系統上撰寫 shell script 設計開發工具</li>
                                 </div>
                             </CSSTransition>
                         </span>
@@ -85,7 +86,7 @@ class Works extends React.Component {
                             onClick={this.handleClickWork3}
                             style={{ fontSize: '22px' }}
                         >
-                            鴻海集團, 韌體工程師, Sep 2018 ~ Mar 2020
+                            鴻海, 韌體工程師, Sep 2018 ~ Mar 2020
                             <CSSTransition
                                 classNames="foxconn cardTransition"
                                 in={this.state.visibleWork3}
@@ -93,11 +94,10 @@ class Works extends React.Component {
                                 unmountOnExit
                             >
                                 <div className="transitionPanel">
-                                    Driver development
-                                    <br />
-                                    Driver unit test with Ceedling
-                                    <br />
-                                    Embedded system maintaining
+                                    <li>用 TDD 的方式開發 Unit test 來維護 SoC driver</li>
+                                    <li>參與韌體開發流程</li>
+                                    <li>Embedded system driver 的開發與維護</li>
+                                    <li>孰悉 ARM Cortex-m4 Spec 以及用在 Embedded system 上的指令與特性</li>
                                 </div>
                             </CSSTransition>
                         </span>

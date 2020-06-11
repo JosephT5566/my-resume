@@ -8,22 +8,28 @@ const expertise = () => {
         <div id="expertiseContainer">
             <div className="comment">
                 <div className="content expertise">
-                    <h2>專長</h2>
-                    <p>
-                        <i className="minus icon"></i>C#/C++
-                    </p>
-                    <p>
-                        <i className="minus icon"></i>PHP
-                    </p>
-                    <p>
-                        <i className="minus icon"></i>JavaScript / jQuery / AJAX
-                    </p>
-                    <p>
-                        <i className="minus icon"></i>React.js
-                    </p>
+                    <h1>language</h1>
+                    <li>C</li>
+                    <li>C#</li>
+                    <li>Linux shell script</li>
+                    <li>SQL (MySQL / SQL anywhere)</li>
+                    <li>PHP</li>
+                    <li>JavaScript / jQuery / AJAX</li>
                 </div>
                 <div className="content interest">
-                    <h2>興趣</h2>
+                    <h1>Tools & environment</h1>
+                    <li>.Net Framework</li>
+                    <li>React.js</li>
+                    <li>Ceedling</li>
+                    <li>Qt</li>
+                </div>
+                <div className="content interest">
+                    <h1>OS</h1>
+                    <li>Windows</li>
+                    <li>Linux</li>
+                </div>
+                <div className="content interest">
+                    <h1>興趣</h1>
                     <p>
                         <i className="minus icon"></i>旅遊
                     </p>
@@ -41,7 +47,7 @@ const expertise = () => {
                         <i className="minus icon"></i>健身
                     </p>
                 </div>
-                <img style={ {width: '33%'} } src={image1} alt="image1"/>
+                {/* <img style={ {width: '33%'} } src={image1} alt="image1"/> */}
             </div>
         </div>
     );
