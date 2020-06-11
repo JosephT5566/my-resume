@@ -1,18 +1,13 @@
-#worksContainer .content {
-    padding: 0 25px;
-    margin: 20px;
-}
-
-#worksContainer .content span {
+#worksContainer .comment span {
     color: CADETBLUE;
 }
 
-#worksContainer .content span:hover {
+#worksContainer .comment span:hover {
     cursor: pointer;
     color: #477678;
 }
 
-#worksContainer .content .transitionPanel {
+#worksContainer .comment .transitionPanel {
     color: black;
 }
 

@@ -1,19 +1,14 @@
-#educationContainer .content {
-    padding: 0 25px;
-    margin: 20px;
-}
-
-#educationContainer .content span {
+#educationContainer .comment span {
     cursor: pointer;
     color: CADETBLUE;
 }
 
-#educationContainer .content span:hover {
+#educationContainer .comment span:hover {
     cursor: pointer;
     color: #477678;
 }
 
-#educationContainer .content .transitionPanel {
+#educationContainer .comment .transitionPanel {
     color: black;
 }
 

@@ -16,6 +16,11 @@ h1, h2, h3, h4, h5 {
     margin-top: 15px;
 }
 
+.comment {
+    padding: 0 25px;
+    margin: 20px;
+}
+
 .ui .segment {
     min-width: 933px;
 }

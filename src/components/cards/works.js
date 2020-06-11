@@ -37,7 +37,7 @@ class Works extends React.Component {
     render() {
         return (
             <div id="worksContainer">
-                <div className="content">
+                <div className="comment">
                     <h1>工作經歷</h1>
                     <p>
                         <i className="circle icon"></i>

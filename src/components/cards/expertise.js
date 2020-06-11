@@ -16,36 +16,19 @@ const expertise = () => {
                     <li>PHP</li>
                     <li>JavaScript / jQuery / AJAX</li>
                 </div>
-                <div className="content interest">
+                <div className="content">
                     <h1>Tools & environment</h1>
+                    <li>Visual Studio Code</li>
+                    <li>Git</li>
                     <li>.Net Framework</li>
                     <li>React.js</li>
                     <li>Ceedling</li>
                     <li>Qt</li>
                 </div>
-                <div className="content interest">
+                <div className="content">
                     <h1>OS</h1>
                     <li>Windows</li>
                     <li>Linux</li>
-                </div>
-                <div className="content interest">
-                    <h1>興趣</h1>
-                    <p>
-                        <i className="minus icon"></i>旅遊
-                    </p>
-                    <p>
-                        <i className="minus icon"></i>攝影
-                    </p>
-                    <p>
-                        <i className="minus icon"></i>滑雪
-                    </p>
-                    <p>
-                        <i className="minus icon"></i>潛水
-                        <span style={{color: 'SILVER', fontSize: '12px'}}> OW / AOW</span>
-                    </p>
-                    <p>
-                        <i className="minus icon"></i>健身
-                    </p>
                 </div>
                 {/* <img style={ {width: '33%'} } src={image1} alt="image1"/> */}
             </div>

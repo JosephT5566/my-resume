@@ -27,7 +27,7 @@ class Education extends React.Component {
     render() {
         return (
             <div id="educationContainer">
-                <div className="content">
+                <div className="comment">
                     <h1>學歷</h1>
                     <p>
                         <i className="circle icon"></i>

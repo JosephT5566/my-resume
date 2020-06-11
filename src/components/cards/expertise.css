@@ -2,12 +2,10 @@
     display: flex;
 }
 
-#expertiseContainer .content {
-    /* width: 33%; */
-    padding: 0 25px;
-    margin: 20px;
-}
-
 #expertiseContainer p {
     margin: 0 0 0.5em;
+}
+
+#expertiseContainer .content {
+    width: 33%;
 }
