@@ -30,6 +30,14 @@ const expertise = () => {
                     <li>Windows</li>
                     <li>Linux</li>
                 </div>
+                <div className="content skill" style={{ width: '25%' }}>
+                    <h1>技能</h1>
+                    <hr />
+                    <li>影像處理演算法設計與應用</li>
+                    <li>C#應用程式設計</li>
+                    <li>網頁前端設計</li>
+                    <li>資料庫管理與應用</li>
+                </div>
                 {/* <img style={ {width: '33%'} } src={image1} alt="image1"/> */}
             </div>
         </div>
