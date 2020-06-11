@@ -4,15 +4,17 @@ import React from 'react';
 
 import personalShot from '../../assets/images/personal_shot.jpg';
 
-const personalInfo = (props) => {
+const personalInfo = () => {
     return (
         <div id="personalInfoContainer">
             <div className="comment">
-                <img
-                    src={personalShot}
-                    alt="personal photo"
-                    style={{ width: '50%' }}
-                />
+                <div className="image" style={{ width: '50%' }}>
+                    <img
+                        src={personalShot}
+                        alt="personal photo"
+                        style={{ maxWidth: '100%', maxHeight: '100%' }}
+                    />
+                </div>
                 <div className="content">
                     <h1>曾俊霖</h1>
                     <hr />
