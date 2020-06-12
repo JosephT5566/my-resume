@@ -21,16 +21,16 @@ class ResumeCardList extends React.Component {
                     <PersonalInfo/>
                 </ResumeCard>
                 <ResumeCard>
-                    <Intro/>
+                    <Works/>
+                </ResumeCard>
+                <ResumeCard>
+                    <Education/>
                 </ResumeCard>
                 <ResumeCard>
                     <Expertise/>
                 </ResumeCard>
                 <ResumeCard>
-                    <Works/>
-                </ResumeCard>
-                <ResumeCard>
-                    <Education/>
+                    <Intro/>
                 </ResumeCard>
                 <ResumeCard>
                     <Collection/>
