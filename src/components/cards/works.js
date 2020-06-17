@@ -7,31 +7,26 @@ class Works extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            collapse: false,
             visibleWork1: false,
             visibleWork2: false,
             visibleWork3: false
         };
-        this.handleClickWork1 = this.handleClickWork1.bind(this);
-        this.handleClickWork2 = this.handleClickWork2.bind(this);
-        this.handleClickWork3 = this.handleClickWork3.bind(this);
     }
 
-    handleClickWork1() {
-        this.setState({ visibleWork1: !this.state.visibleWork1 });
-        this.setState({ visibleWork2: false });
-        this.setState({ visibleWork3: false });
-    }
-
-    handleClickWork2() {
-        this.setState({ visibleWork1: false });
-        this.setState({ visibleWork2: !this.state.visibleWork2 });
-        this.setState({ visibleWork3: false });
-    }
-
-    handleClickWork3() {
-        this.setState({ visibleWork1: false });
-        this.setState({ visibleWork2: false });
-        this.setState({ visibleWork3: !this.state.visibleWork3 });
+    handleCollapse = (key) => () => {
+        let isShowed = this.state[key];
+        this.setState({
+            visibleWork1: false,
+            visibleWork2: false,
+            visibleWork3: false,
+        })
+        if (isShowed) return;
+        this.setState((state) => {
+            return {
+                [key]: !state[key],
+            };
+        })
     }
 
     render() {
@@ -43,7 +38,7 @@ class Works extends React.Component {
                     <p>
                         <i className="circle icon"></i>
                         <span
-                            onClick={this.handleClickWork1} // or we can use arrow funcion directly
+                            onClick={this.handleCollapse('visibleWork1')} // or we can use arrow funcion directly
                             style={{ fontSize: '22px' }}
                         >
                             憶正科技 (MemoRight), 應用工程師, Oct 2016 ~ Mar 2017
@@ -63,7 +58,7 @@ class Works extends React.Component {
                     <p>
                         <i className="circle icon"></i>
                         <span
-                            onClick={this.handleClickWork2}
+                            onClick={this.handleCollapse('visibleWork2')}
                             style={{ fontSize: '22px' }}
                         >
                             晶兆科技 (Big-Inno), 應用工程師, May 2017 ~ Sep 2018
@@ -84,7 +79,7 @@ class Works extends React.Component {
                     <p>
                         <i className="circle icon"></i>
                         <span
-                            onClick={this.handleClickWork3}
+                            onClick={this.handleCollapse('visibleWork3')}
                             style={{ fontSize: '22px' }}
                         >
                             鴻海, 韌體工程師, Sep 2018 ~ Mar 2020

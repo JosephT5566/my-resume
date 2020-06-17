@@ -10,18 +10,20 @@ class Education extends React.Component {
             visibleEdu1: false,
             visibleEdu2: false,
         };
-        this.handleClickEdu1 = this.handleClickEdu1.bind(this);
-        this.handleClickEdu2 = this.handleClickEdu2.bind(this);
     }
 
-    handleClickEdu1() {
-        this.setState({ visibleEdu1: !this.state.visibleEdu1 });
-        this.setState({ visibleEdu2: false });
-    }
-
-    handleClickEdu2() {
-        this.setState({ visibleEdu1: false });
-        this.setState({ visibleEdu2: !this.state.visibleEdu2 });
+    handleCollapse = (key) => () => {
+        let isShowed = this.state[key];
+        this.setState({
+            visibleEdu1: false,
+            visibleEdu2: false,
+        })
+        if (isShowed) return
+        this.setState((state) => {
+            return {
+                [key]: !state[key],
+            };
+        })
     }
 
     render() {
@@ -33,7 +35,7 @@ class Education extends React.Component {
                     <p>
                         <i className="circle icon"></i>
                         <span
-                            onClick={this.handleClickEdu1} // or we can use arrow funcion directly
+                            onClick={this.handleCollapse('visibleEdu1')} // or we can use arrow funcion directly
                             style={{ fontSize: '22px' }}
                         >
                             國立中興大學 (NCHU), 碩士, 2014 ~ 2016
@@ -57,7 +59,7 @@ class Education extends React.Component {
                     <p>
                         <i className="circle icon"></i>
                         <span
-                            onClick={this.handleClickEdu2}
+                            onClick={this.handleCollapse('visibleEdu2')}
                             style={{ fontSize: '22px' }}
                         >
                             國立嘉義大學 (NCYU), 學士, 2010 ~ 2014
