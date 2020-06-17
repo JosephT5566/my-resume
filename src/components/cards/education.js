@@ -44,7 +44,7 @@ class Education extends React.Component {
                     <ClickAwayListener
                         onClickAway={this.handleClickAway('visibleEdu1')}
                     >
-                        <p>
+                        <div className="list">
                             <i className="circle icon"></i>
                             <span
                                 onClick={this.handleCollapse('visibleEdu1')} // or we can use arrow funcion directly
@@ -76,12 +76,12 @@ class Education extends React.Component {
                                     </div>
                                 </CSSTransition>
                             </span>
-                        </p>
+                        </div>
                     </ClickAwayListener>
                     <ClickAwayListener
                         onClickAway={this.handleClickAway('visibleEdu2')}
                     >
-                        <p>
+                        <div className="list">
                             <i className="circle icon"></i>
                             <span
                                 onClick={this.handleCollapse('visibleEdu2')}
@@ -101,7 +101,7 @@ class Education extends React.Component {
                                     </div>
                                 </CSSTransition>
                             </span>
-                        </p>
+                        </div>
                     </ClickAwayListener>
                 </div>
             </div>

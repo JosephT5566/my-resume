@@ -47,7 +47,7 @@ class Works extends React.Component {
                     <ClickAwayListener
                         onClickAway={this.handleClickAway('visibleWork1')}
                     >
-                        <p>
+                        <div className="list">
                             <i className="circle icon"></i>
                             <span
                                 onClick={this.handleCollapse('visibleWork1')} // or we can use arrow funcion directly
@@ -71,12 +71,12 @@ class Works extends React.Component {
                                     </div>
                                 </CSSTransition>
                             </span>
-                        </p>
+                        </div>
                     </ClickAwayListener>
                     <ClickAwayListener
                         onClickAway={this.handleClickAway('visibleWork2')}
                     >
-                        <p>
+                        <div className="list">
                             <i className="circle icon"></i>
                             <span
                                 onClick={this.handleCollapse('visibleWork2')}
@@ -104,12 +104,12 @@ class Works extends React.Component {
                                     </div>
                                 </CSSTransition>
                             </span>
-                        </p>
+                        </div>
                     </ClickAwayListener>
                     <ClickAwayListener
                         onClickAway={this.handleClickAway('visibleWork3')}
                     >
-                        <p>
+                        <div className="list">
                             <i className="circle icon"></i>
                             <span
                                 onClick={this.handleCollapse('visibleWork3')}
@@ -138,7 +138,7 @@ class Works extends React.Component {
                                     </div>
                                 </CSSTransition>
                             </span>
-                        </p>
+                        </div>
                     </ClickAwayListener>
                 </div>
             </div>

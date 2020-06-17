@@ -11,6 +11,10 @@
     color: black;
 }
 
+#worksContainer .comment .list {
+    margin: 0 0 1em;
+}
+
 #worksContainer .transitionPanel {
     width: 100%;
     height: 70px;
