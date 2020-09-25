@@ -1,3 +1,5 @@
+@import 'assets/styles/main.scss';
+
 @font-face {
     font-family: 'Huninn';
     src: local('FiraSans'), url(../assets/fonts/jf-openhuninn-1.1/jf-openhuninn-1.1.ttf) format('truetype');
@@ -23,4 +25,15 @@ h1, h2, h3, h4, h5 {
 
 .ui .segment {
     min-width: 933px;
+}
+
+#app {
+    display: flex;
+    #content{
+        margin-left: _size(sidebar-width);
+        @include breakpoint('<=large') {
+            margin-left: 0;
+            margin-top: _size(sidebar-height);
+        }
+    }
 }

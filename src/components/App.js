@@ -1,16 +1,24 @@
-import './App.css';
+import './App.scss';
 import '../assets/fonts/jf-openhuninn-1.1/jf-openhuninn-1.1.ttf';
 
 import React from 'react';
 
-import ResumeCardList from './ResumeCardList';
+import Main from './Main';
+import Navigation from './Navigation';
+import Footer from './Footer';
 
 class App extends React.Component {
     render() {
         return (
-            <div className="ui container">
-                <ResumeCardList/>
-            </div>
+            <>
+                <div id="app">
+                    <Navigation />
+                    <div id="content">
+                        <Main />
+                        <Footer />
+                    </div>
+                </div>
+            </>
         );
     }
 }
