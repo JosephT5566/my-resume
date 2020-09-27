@@ -1,7 +1,7 @@
-import './expertise.css';
-import image1 from '../../assets/images/image1.jpg';
-
 import React from 'react';
+import image1 from 'assets/images/image1.jpg';
+
+import './expertise.scss';
 
 const expertise = () => {
     return (

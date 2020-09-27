@@ -1,8 +1,8 @@
-import './personalInfo.css';
-
 import React from 'react';
 
-import personalShot from '../../assets/images/personal_shot.jpg';
+import personalShot from 'assets/images/personal_shot.jpg';
+
+import './personalInfo.scss';
 
 const personalInfo = () => {
     return (

@@ -1,8 +1,8 @@
-import './works.css';
-
 import React from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { ClickAwayListener } from '@material-ui/core';
+
+import './works.scss';
 
 class Works extends React.Component {
     constructor(props) {
