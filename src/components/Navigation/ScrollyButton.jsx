@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import CurrentIndexContext from './Context';
+import CurrentIndexContext from '../../contexts/IndexContext';
 
 export default function ScrollyButton({ label, index, onClick = null }) {
     const currentIndexContext = useContext(CurrentIndexContext);
