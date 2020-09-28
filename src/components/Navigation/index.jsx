@@ -7,7 +7,7 @@ import './styles.scss';
 export default function Navigation() {
     return (
         <section id="sidebar">
-            <div class="inner">
+            <div className="inner">
                 <CurrentIndexStore>
                     <nav>
                         <ul>
