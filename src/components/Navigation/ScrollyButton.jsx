@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
+import CurrentIndexContext from './Context';
 
-export default function ScrollyButton({ label, index, currentIndex, onClick = null }) {
-    const [active, setActive] = useState('');
-
-    useEffect(() => {
-        if (index === currentIndex) {
-            setActive('active');
-        } else {
-            if (active === 'active') setActive('');
-        }
-    }, [currentIndex]);
+export default function ScrollyButton({ label, index, onClick = null }) {
+    const currentIndexContext = useContext(CurrentIndexContext);
+    const active = index === currentIndexContext.currentIndex ? 'active' : '';
 
     return (
-        <a className={`scrolly ${active}`} onClick={onClick}>
+        <a
+            className={`scrolly ${active}`}
+            onClick={() => {
+                currentIndexContext.onIndexChange(index);
+                if (onClick) onClick();
+            }}
+        >
             {label}
         </a>
     );
