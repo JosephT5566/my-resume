@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import ScrollTrigger from 'react-scroll-trigger';
+import CurrentIndexContext from '../../contexts/IndexContext';
 
 import Collections from '../InfoCards/Collections';
 import Educations from '../InfoCards/Educations';
@@ -9,15 +11,59 @@ import Skills from '../InfoCards/Skills';
 import Works from '../InfoCards/Works';
 
 export default function Menu() {
+    const currentIndexContext = useContext(CurrentIndexContext);
+
     return (
         <>
-            <Info />
-            <Educations />
-            <Works />
-            <Expertises />
-            <Skills />
-            <Intro />
-            <Collections />
+            <ScrollTrigger
+                onEnter={() => {
+                    currentIndexContext.onIndexChange(1);
+                }}
+            >
+                <Info />
+            </ScrollTrigger>
+            <ScrollTrigger
+                onEnter={() => {
+                    currentIndexContext.onIndexChange(2);
+                }}
+            >
+                <Educations />
+            </ScrollTrigger>
+            <ScrollTrigger
+                onEnter={() => {
+                    currentIndexContext.onIndexChange(3);
+                }}
+            >
+                <Works />
+            </ScrollTrigger>
+            <ScrollTrigger
+                onEnter={() => {
+                    currentIndexContext.onIndexChange(4);
+                }}
+            >
+                <Expertises />
+            </ScrollTrigger>
+            <ScrollTrigger
+                onEnter={() => {
+                    currentIndexContext.onIndexChange(5);
+                }}
+            >
+                <Skills />
+            </ScrollTrigger>
+            <ScrollTrigger
+                onEnter={() => {
+                    currentIndexContext.onIndexChange(6);
+                }}
+            >
+                <Intro />
+            </ScrollTrigger>
+            <ScrollTrigger
+                onEnter={() => {
+                    currentIndexContext.onIndexChange(7);
+                }}
+            >
+                <Collections />
+            </ScrollTrigger>
         </>
     );
 }
