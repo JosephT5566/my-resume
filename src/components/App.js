@@ -6,7 +6,6 @@ import { CurrentIndexStore } from '../contexts/IndexContext';
 
 import Main from './Main';
 import Navigation from './Navigation';
-import Footer from './Footer';
 
 class App extends React.Component {
     render() {
@@ -14,10 +13,7 @@ class App extends React.Component {
             <div id="app">
                 <CurrentIndexStore>
                     <Navigation />
-                    <div id="content">
-                        <Main />
-                        <Footer />
-                    </div>
+                    <Main />
                 </CurrentIndexStore>
             </div>
         );
