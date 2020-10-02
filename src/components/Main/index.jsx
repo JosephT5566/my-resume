@@ -9,12 +9,15 @@ import Info from '../InfoCards/Info';
 import Intro from '../InfoCards/Intro';
 import Skills from '../InfoCards/Skills';
 import Works from '../InfoCards/Works';
+import Footer from '../Footer';
+
+import './styles.scss';
 
 export default function Menu() {
     const currentIndexContext = useContext(CurrentIndexContext);
 
     return (
-        <>
+        <div id="main">
             <ScrollTrigger
                 onEnter={() => {
                     currentIndexContext.onIndexChange(1);
@@ -64,6 +67,7 @@ export default function Menu() {
             >
                 <Collections />
             </ScrollTrigger>
-        </>
+            <Footer />
+        </div>
     );
 }

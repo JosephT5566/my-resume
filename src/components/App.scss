@@ -29,11 +29,7 @@ h1, h2, h3, h4, h5 {
 
 #app {
     display: flex;
-    #content{
-        margin-left: _size(sidebar-width);
-        @include breakpoint('<=large') {
-            margin-left: 0;
-            margin-top: _size(sidebar-height);
-        }
+    @include breakpoint('<=large') {
+        flex-direction: column;
     }
 }

@@ -10,9 +10,7 @@
     left: 0;
     overflow-x: hidden;
     overflow-y: auto;
-    position: fixed;
     text-align: right;
-    top: 0;
     width: _size(sidebar-width);
     z-index: _misc(z-index-base);
 
@@ -38,8 +36,7 @@
 
             > li {
                 transform: translateY(0);
-                transition: opacity #{_duration(activation) * 0.15} ease,
-                    transform #{_duration(activation) * 0.75} ease;
+                transition: opacity #{_duration(activation) * 0.15} ease, transform #{_duration(activation) * 0.75} ease;
                 margin: 1.5em 0 0 0;
                 opacity: 1;
                 padding: 0;
@@ -48,14 +45,13 @@
                 &:first-child {
                     margin: 0;
                 }
-                &:hover{
+                &:hover {
                     cursor: pointer;
                 }
 
                 @for $i from 1 through _misc(max-sidebar-links) {
                     &:nth-child(#{$i}) {
-                        transition-delay: #{(_duration(activation) * 0.2 * $i) +
-                            (_duration(activation) * 0.25)};
+                        transition-delay: #{(_duration(activation) * 0.2 * $i) + (_duration(activation) * 0.25)};
                     }
                 }
             }
@@ -92,11 +88,7 @@
             }
 
             &:after {
-                background-image: linear-gradient(
-                    to right,
-                    #{_palette(accent1)},
-                    #{_palette(accent3)}
-                );
+                background-image: linear-gradient(to right, #{_palette(accent1)}, #{_palette(accent3)});
                 transition: max-width #{_duration(transition)} ease;
                 max-width: 0;
             }
