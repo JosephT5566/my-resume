@@ -1,6 +1,7 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import ScrollTrigger from 'react-scroll-trigger';
 import CurrentIndexContext from '../../contexts/IndexContext';
+import ScrollContext from '../../contexts/ScrollContext';
 
 import Collections from '../InfoCards/Collections';
 import Educations from '../InfoCards/Educations';
@@ -15,58 +16,53 @@ import './styles.scss';
 
 export default function Menu() {
     const currentIndexContext = useContext(CurrentIndexContext);
+    const scrollContext = useContext(ScrollContext);
+    const menuRef = useRef(null);
+
+    const divRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)];
+
+    useEffect(() => {
+        divRefs.forEach((divRef, index) => {
+            // console.log(divRef.current.getBoundingClientRect().top);
+            scrollContext.onSetPositions(
+                index,
+                divRef.current.getBoundingClientRect().top,
+                divRef.current.getBoundingClientRect().bottom
+            );
+        });
+    }, []);
+
+    const onScroll = () => {
+        // const scrollY = window.scrollY; //Don't get confused by what's scrolling - It's not the window
+        const scrollTop = menuRef.current.scrollTop;
+        scrollContext.onScrollChange(scrollTop);
+        // console.log(`onScroll, window.scrollY: ${scrollY} myRef.scrollTop: ${scrollTop}`);
+        // console.log(infoRef.current.getBoundingClientRect().y);
+    };
 
     return (
-        <div id="main">
-            <ScrollTrigger
-                onEnter={() => {
-                    currentIndexContext.onIndexChange(1);
-                }}
-            >
+        <div id="main" ref={menuRef} onScroll={onScroll}>
+            <div ref={divRefs[0]}>
                 <Info />
-            </ScrollTrigger>
-            <ScrollTrigger
-                onEnter={() => {
-                    currentIndexContext.onIndexChange(2);
-                }}
-            >
+            </div>
+            <div ref={divRefs[1]}>
                 <Educations />
-            </ScrollTrigger>
-            <ScrollTrigger
-                onEnter={() => {
-                    currentIndexContext.onIndexChange(3);
-                }}
-            >
+            </div>
+            <div ref={divRefs[2]}>
                 <Works />
-            </ScrollTrigger>
-            <ScrollTrigger
-                onEnter={() => {
-                    currentIndexContext.onIndexChange(4);
-                }}
-            >
+            </div>
+            <div ref={divRefs[3]}>
                 <Expertises />
-            </ScrollTrigger>
-            <ScrollTrigger
-                onEnter={() => {
-                    currentIndexContext.onIndexChange(5);
-                }}
-            >
+            </div>
+            <div ref={divRefs[4]}>
                 <Skills />
-            </ScrollTrigger>
-            <ScrollTrigger
-                onEnter={() => {
-                    currentIndexContext.onIndexChange(6);
-                }}
-            >
+            </div>
+            <div ref={divRefs[5]}>
                 <Intro />
-            </ScrollTrigger>
-            <ScrollTrigger
-                onEnter={() => {
-                    currentIndexContext.onIndexChange(7);
-                }}
-            >
+            </div>
+            <div ref={divRefs[6]}>
                 <Collections />
-            </ScrollTrigger>
+            </div>
             <Footer />
         </div>
     );
