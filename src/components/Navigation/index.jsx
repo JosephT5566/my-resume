@@ -10,16 +10,25 @@ export default function Navigation() {
                 <nav>
                     <ul>
                         <li>
-                            <ScrollyButton label="Welcome" index={1} />
+                            <ScrollyButton label="Info" index={0} />
                         </li>
                         <li>
-                            <ScrollyButton label="Who we are" index={2} />
+                            <ScrollyButton label="Educations" index={1} />
                         </li>
                         <li>
-                            <ScrollyButton label="What we do" index={3} />
+                            <ScrollyButton label="Works" index={2} />
                         </li>
                         <li>
-                            <ScrollyButton label="Get in touch" index={4} />
+                            <ScrollyButton label="Expertises" index={3} />
+                        </li>
+                        <li>
+                            <ScrollyButton label="Skills" index={4} />
+                        </li>
+                        <li>
+                            <ScrollyButton label="Introduction" index={5} />
+                        </li>
+                        <li>
+                            <ScrollyButton label="Collections" index={6} />
                         </li>
                     </ul>
                 </nav>
