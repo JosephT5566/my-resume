@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
-import ScrollTrigger from 'react-scroll-trigger';
-import CurrentIndexContext from '../../contexts/IndexContext';
+import React, { useContext, useState, useEffect } from 'react';
+import PositionContext from '../../contexts/PositionContext';
 
 import Collections from '../InfoCards/Collections';
 import Educations from '../InfoCards/Educations';
@@ -10,60 +9,40 @@ import Intro from '../InfoCards/Intro';
 import Skills from '../InfoCards/Skills';
 import Works from '../InfoCards/Works';
 
+import InfoCard from '../InfoCards/InfoCard';
+
 export default function Menu() {
-    const currentIndexContext = useContext(CurrentIndexContext);
+    const { onPositionChange } = useContext(PositionContext);
+    const [elementTop, setElementTop] = useState({});
+
+    useEffect(() => {
+        // console.log('element top: ', elementTop);
+        onPositionChange(elementTop);
+    }, [elementTop]);
 
     return (
         <>
-            <ScrollTrigger
-                onEnter={() => {
-                    currentIndexContext.onIndexChange(1);
-                }}
-            >
+            <InfoCard id={0} setTop={setElementTop}>
                 <Info />
-            </ScrollTrigger>
-            <ScrollTrigger
-                onEnter={() => {
-                    currentIndexContext.onIndexChange(2);
-                }}
-            >
+            </InfoCard>
+            <InfoCard id={1} setTop={setElementTop}>
                 <Educations />
-            </ScrollTrigger>
-            <ScrollTrigger
-                onEnter={() => {
-                    currentIndexContext.onIndexChange(3);
-                }}
-            >
+            </InfoCard>
+            <InfoCard id={2} setTop={setElementTop}>
                 <Works />
-            </ScrollTrigger>
-            <ScrollTrigger
-                onEnter={() => {
-                    currentIndexContext.onIndexChange(4);
-                }}
-            >
+            </InfoCard>
+            <InfoCard id={3} setTop={setElementTop}>
                 <Expertises />
-            </ScrollTrigger>
-            <ScrollTrigger
-                onEnter={() => {
-                    currentIndexContext.onIndexChange(5);
-                }}
-            >
+            </InfoCard>
+            <InfoCard id={4} setTop={setElementTop}>
                 <Skills />
-            </ScrollTrigger>
-            <ScrollTrigger
-                onEnter={() => {
-                    currentIndexContext.onIndexChange(6);
-                }}
-            >
+            </InfoCard>
+            <InfoCard id={5} setTop={setElementTop}>
                 <Intro />
-            </ScrollTrigger>
-            <ScrollTrigger
-                onEnter={() => {
-                    currentIndexContext.onIndexChange(7);
-                }}
-            >
+            </InfoCard>
+            <InfoCard id={6} setTop={setElementTop}>
                 <Collections />
-            </ScrollTrigger>
+            </InfoCard>
         </>
     );
 }
