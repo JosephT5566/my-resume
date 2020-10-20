@@ -12,12 +12,13 @@ import Works from '../InfoCards/Works';
 import InfoCard from '../InfoCards/InfoCard';
 
 export default function Menu() {
-    const { onPositionChange } = useContext(PositionContext);
+    const { onPositionChange, onBasePointChange } = useContext(PositionContext);
     const [elementTop, setElementTop] = useState({});
 
     useEffect(() => {
         // console.log('element top: ', elementTop);
         onPositionChange(elementTop);
+        onBasePointChange(document.documentElement.scrollTop)
     }, [elementTop]);
 
     return (

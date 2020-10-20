@@ -4,16 +4,29 @@ const Context = React.createContext(null); // default value
 
 export function PositionStore(props) {
     const [positions, setPositions] = useState({});
+    const [basePoint, setBasePoint] = useState(0);
 
     const onPositionChange = (position) => {
         setPositions(position);
     };
 
-    useEffect(() => {
-        // console.log('positions in context: ',positions);
-    }, [positions]);
+    const onBasePointChange = (position) => {
+        setBasePoint(position);
+    };
 
-    return <Context.Provider value={{ positions, onPositionChange }}>{props.children}</Context.Provider>;
+    // useEffect(() => {
+    //     console.log('positions in context: ', positions);
+    // }, [positions]);
+
+    // useEffect(() => {
+    //     console.log('base point in context: ', basePoint);
+    // }, [basePoint]);
+
+    return (
+        <Context.Provider value={{ positions, onPositionChange, basePoint, onBasePointChange }}>
+            {props.children}
+        </Context.Provider>
+    );
 }
 
 export default Context;
