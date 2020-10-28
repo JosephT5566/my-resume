@@ -1,10 +1,13 @@
 import React, { useState, useContext, useEffect } from 'react';
+import Scroll from 'react-scroll';
 
 import PositionContext from '../../contexts/PositionContext';
 import IndexContext from '../../contexts/IndexContext';
 import ScrollyButton from './ScrollyButton';
 
 import './styles.scss';
+
+const scroll = Scroll.animateScroll;
 
 export default function Navigation() {
     const [isClicked, setIsClicked] = useState(false);
@@ -63,7 +66,7 @@ export default function Navigation() {
                                 isClicked={isClicked}
                                 onClick={() => {
                                     setIsClicked(true);
-                                    window.scrollTo(0, positions[0] + basePoint);
+                                    scroll.scrollTo(positions[0] + basePoint - 1);
                                 }}
                             />
                         </li>
@@ -74,7 +77,7 @@ export default function Navigation() {
                                 isClicked={isClicked}
                                 onClick={() => {
                                     setIsClicked(true);
-                                    window.scrollTo(0, positions[1] + basePoint);
+                                    scroll.scrollTo(positions[1] + basePoint - 1);
                                 }}
                             />
                         </li>
@@ -85,7 +88,7 @@ export default function Navigation() {
                                 isClicked={isClicked}
                                 onClick={() => {
                                     setIsClicked(true);
-                                    window.scrollTo(0, positions[2] + basePoint);
+                                    scroll.scrollTo(positions[2] + basePoint - 1);
                                 }}
                             />
                         </li>
@@ -96,7 +99,7 @@ export default function Navigation() {
                                 isClicked={isClicked}
                                 onClick={() => {
                                     setIsClicked(true);
-                                    window.scrollTo(0, positions[3] + basePoint);
+                                    scroll.scrollTo(positions[3] + basePoint - 1);
                                 }}
                             />
                         </li>
@@ -107,7 +110,7 @@ export default function Navigation() {
                                 isClicked={isClicked}
                                 onClick={() => {
                                     setIsClicked(true);
-                                    window.scrollTo(0, positions[4] + basePoint);
+                                    scroll.scrollTo(positions[4] + basePoint - 1);
                                 }}
                             />
                         </li>
@@ -118,7 +121,7 @@ export default function Navigation() {
                                 isClicked={isClicked}
                                 onClick={() => {
                                     setIsClicked(true);
-                                    window.scrollTo(0, positions[5] + basePoint);
+                                    scroll.scrollTo(positions[5] + basePoint - 1);
                                 }}
                             />
                         </li>
@@ -129,7 +132,7 @@ export default function Navigation() {
                                 isClicked={isClicked}
                                 onClick={() => {
                                     setIsClicked(true);
-                                    window.scrollTo(0, positions[6] + basePoint);
+                                    scroll.scrollTo(positions[6] + basePoint - 1);
                                 }}
                             />
                         </li>
