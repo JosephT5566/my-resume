@@ -1,18 +1,18 @@
-#educationContainer .comment span {
+#educationContainer span {
     cursor: pointer;
     color: CADETBLUE;
 }
 
-#educationContainer .comment span:hover {
+#educationContainer span:hover {
     cursor: pointer;
     color: #477678;
 }
 
-#educationContainer .comment .transitionPanel {
+#educationContainer .transitionPanel {
     color: black;
 }
 
-#educationContainer .comment .list {
+#educationContainer .list {
     margin: 0 0 1em;
 }
 
@@ -24,7 +24,7 @@
 
 #educationContainer .cardTransition-enter {
     height: 0px;
-    opacity:0;
+    opacity: 0;
 }
 
 #educationContainer .cardTransition-enter-active {

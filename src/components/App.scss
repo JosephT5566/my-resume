@@ -14,23 +14,15 @@ h1, h2, h3, h4, h5 {
     font-family: 'Huninn';
 }
 
-.container {
+.ui.container {
     margin-top: 15px;
-}
-
-.comment {
-    padding: 0 25px;
-    margin: 20px;
-}
-
-.ui .segment {
-    min-width: 933px;
 }
 
 #app {
     display: flex;
     #content{
         margin-left: _size(sidebar-width);
+        width: 100%;
         @include breakpoint('<=large') {
             margin-left: 0;
             margin-top: _size(sidebar-height);

@@ -22,7 +22,7 @@ export default function Menu() {
     }, [elementTop]);
 
     return (
-        <>
+        <div className="ui container">
             <InfoCard id={0} setTop={setElementTop}>
                 <Info />
             </InfoCard>
@@ -44,6 +44,6 @@ export default function Menu() {
             <InfoCard id={6} setTop={setElementTop}>
                 <Collections />
             </InfoCard>
-        </>
+        </div>
     );
 }
