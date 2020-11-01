@@ -1,3 +1,5 @@
+@import 'assets/styles/main.scss';
+
 #personalInfoContainer {
     display: flex;
 }
@@ -15,11 +17,9 @@
 .socialLink i
 {
     font-size: 200%;
-    color: CADETBLUE;
-}
-
-.socialLink i:hover
-{
+    color: _palette(accent1);
     cursor: pointer;
-    color: #477678;
+    &:hover {
+        color: _palette(accent1-alt);
+    }
 }

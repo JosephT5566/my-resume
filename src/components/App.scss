@@ -8,10 +8,30 @@
 * {
     font-family: 'Huninn';
     font-size: 15px;
+    color: _palette(bg-dark);
 }
 
 h1, h2, h3, h4, h5 {
     font-family: 'Huninn';
+}
+
+h1, h2 {
+    display: inline-block;
+    padding: 0 0.75em 0.5em 0;
+    margin-bottom: 1em;
+    border-bottom: solid 3px _palette(accent1);
+}
+
+span {
+    color: _palette(bg-alt);
+    cursor: pointer;
+    &:hover {
+        color: _palette(bg-dark);
+    }
+}
+
+img {
+    border-radius: 0.5em;
 }
 
 .ui.container {
@@ -21,6 +41,7 @@ h1, h2, h3, h4, h5 {
 #app {
     display: flex;
     #content{
+        background-color: _palette(fg);
         margin-left: _size(sidebar-width);
         width: 100%;
         @include breakpoint('<=large') {

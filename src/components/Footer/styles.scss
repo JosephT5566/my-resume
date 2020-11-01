@@ -5,10 +5,10 @@
 #footer {
     > .inner {
         a {
-            border-bottom-color: _palette(border);
+            color: _palette(accent2);
 
             &:hover {
-                border-bottom-color: transparent;
+                color: _palette(accent2-alt);
             }
         }
 
@@ -16,6 +16,10 @@
             font-size: 0.8em;
             color: _palette(border);
         }
+    }
+
+    li {
+        color: _palette(fg);
     }
 
     // #header + #wrapper + & {

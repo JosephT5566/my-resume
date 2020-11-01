@@ -1,5 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 
+import './InfoCard.scss';
+
 export default function InfoCard({ id, setTop, children }) {
     const cardRef = useRef(null);
 
@@ -9,5 +11,9 @@ export default function InfoCard({ id, setTop, children }) {
         });
     }, []);
 
-    return <div ref={cardRef}>{children}</div>;
+    return (
+        <div id="infoCard" ref={cardRef}>
+            {children}
+        </div>
+    );
 }

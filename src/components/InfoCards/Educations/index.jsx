@@ -38,7 +38,6 @@ class Education extends React.Component {
         return (
             <div id="educationContainer">
                 <h1>學歷</h1>
-                <hr />
                 <ClickAwayListener onClickAway={this.handleClickAway('visibleEdu1')}>
                     <div className="list">
                         <i className="circle icon"></i>

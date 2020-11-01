@@ -42,7 +42,7 @@ class Works extends React.Component {
         return (
             <div id="worksContainer">
                 <h1>工作經歷</h1>
-                <hr />
+                
                 <ClickAwayListener onClickAway={this.handleClickAway('visibleWork1')}>
                     <div className="list">
                         <i className="circle icon"></i>

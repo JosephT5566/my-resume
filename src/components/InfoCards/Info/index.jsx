@@ -12,7 +12,6 @@ const personalInfo = () => {
             </div>
             <div className="content">
                 <h1>曾俊霖</h1>
-                <hr />
                 <p className="birth">
                     <i className="birthday cake icon"></i>1992/03/04
                 </p>
@@ -27,7 +26,6 @@ const personalInfo = () => {
                 <p className="phone">
                     <i className="phone icon"></i>0928746335
                 </p>
-                <hr />
                 <div className="socialLink">
                     <i
                         className="linkedin icon"

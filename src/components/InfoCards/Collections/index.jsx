@@ -7,7 +7,6 @@ const collection = () => {
     return (
         <div id="collectionContainer">
             <h1>作品</h1>
-            <hr />
             <div className="collection" style={{ display: 'flex' }}>
                 <div className="image" style={{ width: '50%' }}>
                     <img
@@ -21,7 +20,7 @@ const collection = () => {
                 </div>
                 <div className="description" style={{ padding: '0 0 0 20px' }}>
                     <h2>Josify</h2>
-                    <h3 style={{ margin: '0 0 20px 0' }}>參照Spotify介面規劃的音樂App</h3>
+                    <h3>參照Spotify介面規劃的音樂App</h3>
                     <li>PHP</li>
                     <li>JavaScript / JQuery / Ajax</li>
                     <li>HTML5</li>

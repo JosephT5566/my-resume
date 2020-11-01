@@ -1,12 +1,4 @@
-#educationContainer span {
-    cursor: pointer;
-    color: CADETBLUE;
-}
-
-#educationContainer span:hover {
-    cursor: pointer;
-    color: #477678;
-}
+@import 'assets/styles/main.scss';
 
 #educationContainer .transitionPanel {
     color: black;

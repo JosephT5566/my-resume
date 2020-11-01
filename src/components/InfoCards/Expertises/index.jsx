@@ -8,7 +8,6 @@ const expertise = () => {
         <div id="expertiseContainer">
             <div className="content expertise">
                 <h1>language</h1>
-                <hr />
                 <li>C</li>
                 <li>C#</li>
                 <li>Linux shell script</li>
@@ -18,7 +17,6 @@ const expertise = () => {
             </div>
             <div className="content tool">
                 <h1>Tools & environment</h1>
-                <hr />
                 <li>Visual Studio Code</li>
                 <li>Git</li>
                 <li>.Net Framework</li>
@@ -29,7 +27,6 @@ const expertise = () => {
             </div>
             <div className="content os">
                 <h1>OS</h1>
-                <hr />
                 <li>Windows</li>
                 <li>Linux</li>
             </div>
