@@ -1,38 +1,36 @@
-#worksContainer .transitionPanel {
-    color: black;
+.MuiPaper-elevation1 {
+    box-shadow: none !important;
 }
 
-#worksContainer .list {
-    margin: 0 0 1em;
+.MuiPaper-root {
+    background-color: inherit !important;
 }
 
-#worksContainer .transitionPanel {
-    width: 100%;
-    height: 70px;
-    margin: 0 30px;
-    /* padding: 10px 0 0 0; */
-    /* margin-top: 10px; */
+.MuiAccordion-root.Mui-expanded {
+    margin: 0;
 }
 
-#worksContainer .cardTransition-enter {
-    height: 0px;
-    opacity:0;
+.MuiAccordion-root {
+    &::before {
+        background-color: inherit !important;
+    }
 }
 
-#worksContainer .cardTransition-enter-active {
-    height: 70px;
-    opacity: 1;
-    transform: translateY(0%);
-    transition: all 300ms ease;
+.MuiAccordionSummary-root {
+    flex-direction: row-reverse;
 }
 
-/* .cardTransition-exit {
-    height: 100px;
-} */
+.MuiIconButton-root {
+    margin-right: 0.3em !important;
+}
 
-#worksContainer .cardTransition-exit-active {
-    height: 0px;
-    opacity: 0;
-    transform: translateY(0%);
-    transition: all 300ms ease;
+.accordionTitle {
+    display: flex;
+    align-items: center;
+    color: _palette(bg-alt);
+    cursor: pointer;
+    font-size: 1.6em;
+    &:hover {
+        color: _palette(bg-dark);
+    }
 }
