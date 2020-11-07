@@ -1,32 +1,9 @@
 @import 'assets/styles/main.scss';
 
-.MuiPaper-elevation1 {
-    box-shadow: none !important;
-}
-
-.MuiPaper-root {
-    background-color: inherit !important;
-}
-
-.MuiAccordion-root.Mui-expanded {
-    margin: 0;
-}
-
-.MuiAccordion-root {
-    &::before {
-        background-color: inherit !important;
-    }
-}
-
-.MuiAccordionSummary-root {
-    flex-direction: row-reverse;
-}
-
-.MuiIconButton-root {
-    margin-right: 0.3em !important;
-}
-
 #educationContainer {
+    .accordionSummary {
+        padding: 0;
+    }
     .accordionTitle {
         display: flex;
         align-items: center;
@@ -36,6 +13,22 @@
         font-size: 1.6em;
         &:hover {
             color: _palette(bg-dark);
+        }
+    }
+    .transitionPanel {
+        .title {
+            display: flex;
+            justify-content: space-between;
+            > h3 {
+                margin: 0;
+            }
+        }
+        p.subtitle {
+            font-size: 12px;
+            padding-left: 1em;
+            margin-left: 1em;
+            border-left: solid 2px;
+            // color: _palette(text-light);
         }
     }
 }

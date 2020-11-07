@@ -34,6 +34,12 @@ img {
     border-radius: 0.5em;
 }
 
+p {
+    margin: 0 0 0.8em 0;
+    line-height: 1.5em;
+    color: _palette(text);
+}
+
 .ui.container {
     margin-top: 15px;
 }
@@ -52,4 +58,30 @@ img {
             margin: 0;
         }
     }
+}
+
+.MuiPaper-elevation1 {
+    box-shadow: none !important;
+}
+
+.MuiPaper-root {
+    background-color: inherit !important;
+}
+
+.MuiAccordion-root.Mui-expanded {
+    margin: 0;
+}
+
+.MuiAccordion-root {
+    &::before {
+        background-color: inherit !important;
+    }
+}
+
+.MuiAccordionSummary-root {
+    flex-direction: row-reverse;
+}
+
+.MuiIconButton-root {
+    margin-right: 0.3em !important;
 }

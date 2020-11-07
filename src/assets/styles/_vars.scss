@@ -50,6 +50,7 @@ $font: (
 }
 
 $bg: #AC9D81;
+$text: #4E555A;
 $accent1: #93032E;
 $accent2: #f56a6a;
 $accent3: #E6B5AD;
@@ -61,6 +62,8 @@ $palette: (
     fg:					rgba(247,245,243,0.55),
     fg-bold:			#ffffff,
     fg-light:			rgba(247,245,243,0.35),
+    text:               $text,
+    text-light:         lighten($text, 30),
     border:				rgba(247,245,243,0.15),
     border-bg:			rgba(247,245,243,0.05),
     accent1:			$accent1,

@@ -25,7 +25,9 @@
             .description {
                 flex: 1 0 30%;
                 h2 {
-                    text-align: center;
+                    @include breakpoint('<=small') {
+                        text-align: center;
+                    }
                 }
             }
         }

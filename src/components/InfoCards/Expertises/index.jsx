@@ -8,33 +8,33 @@ const expertise = () => {
         <div id="expertiseContainer">
             <div className="content">
                 <div className="section">
-                    <h1>language</h1>
+                    <h1>Language</h1>
                     <div className="list">
-                        <li>C</li>
-                        <li>C#</li>
-                        <li>Linux shell script</li>
-                        <li>SQL (MySQL / SQL anywhere)</li>
-                        <li>PHP</li>
-                        <li>JavaScript / jQuery / AJAX</li>
+                        <p>C</p>
+                        <p>C#</p>
+                        <p>Linux shell script</p>
+                        <p>SQL (MySQL / SQL anywhere)</p>
+                        <p>PHP</p>
+                        <p>JavaScript / jQuery / AJAX</p>
                     </div>
                 </div>
                 <div className="section">
-                    <h1>Tools & environment</h1>
+                    <h1>Tools & Environment</h1>
                     <div className="list">
-                        <li>Visual Studio Code</li>
-                        <li>Git</li>
-                        <li>.Net Framework</li>
-                        <li>React.js</li>
-                        <li>PHP</li>
-                        <li>Ceedling</li>
-                        <li>Qt</li>
+                        <p>Visual Studio Code</p>
+                        <p>Git</p>
+                        <p>.Net Framework</p>
+                        <p>React.js</p>
+                        <p>PHP</p>
+                        <p>Ceedling</p>
+                        <p>Qt</p>
                     </div>
                 </div>
                 <div className="section">
                     <div className="list">
                         <h1>OS</h1>
-                        <li>Windows</li>
-                        <li>Linux</li>
+                        <p>Windows</p>
+                        <p>Linux</p>
                     </div>
                 </div>
             </div>
