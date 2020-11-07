@@ -1,18 +1,18 @@
 @import 'assets/styles/main.scss';
 
 @font-face {
-    font-family: 'Huninn';
+    font-family: Huninn;
     src: local('FiraSans'), url(../assets/fonts/jf-openhuninn-1.1/jf-openhuninn-1.1.ttf) format('truetype');
 }
 
 * {
-    font-family: 'Huninn';
+    font-family: _font(family);
     font-size: 15px;
     color: _palette(bg-dark);
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: 'Huninn';
+    font-family: _font(family);
 }
 
 h1 {
