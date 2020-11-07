@@ -1,31 +1,38 @@
 import React from 'react';
 
+import CakeIcon from '@material-ui/icons/Cake';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import MailIcon from '@material-ui/icons/Mail';
+import PhoneIcon from '@material-ui/icons/Phone';
+
 import personalShot from 'assets/images/personal_shot.jpg';
 
-import './personalInfo.scss';
+import './styles.scss';
 
 const personalInfo = () => {
     return (
-        <div id="personalInfoContainer">
-            <div className="image" style={{ width: '50%' }}>
-                <img src={personalShot} alt="personal photo" style={{ maxWidth: '100%', maxHeight: '100%' }} />
+        <div id="infoContainer">
+            <div className="image">
+                <img src={personalShot} alt="personal photo" style={{ width: '100%' }} />
             </div>
             <div className="content">
                 <h1>曾俊霖</h1>
-                <p className="birth">
-                    <i className="birthday cake icon"></i>1992/03/04
-                </p>
-                <p className="address">
-                    <i className="map marker alternate icon"></i>
+                <div className="item">
+                    <CakeIcon className="icon" fontSize="medium" />
+                    1992/03/04
+                </div>
+                <div className="item">
+                    <LocationOnIcon className="icon" fontSize="medium" />
                     新竹縣竹北市
-                </p>
-                <p className="email">
-                    <i className="envelope icon"></i>
+                </div>
+                <div className="item">
+                    <MailIcon className="icon" fontSize="medium" />
                     zxp930110@hotmail.com.tw
-                </p>
-                <p className="phone">
-                    <i className="phone icon"></i>0928746335
-                </p>
+                </div>
+                <div className="item">
+                    <PhoneIcon className="icon" fontSize="medium" />
+                    0928746335
+                </div>
                 <div className="socialLink">
                     <i
                         className="linkedin icon"
