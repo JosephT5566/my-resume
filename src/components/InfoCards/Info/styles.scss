@@ -2,10 +2,11 @@
 
 #infoContainer {
     display: flex;
+    position: relative;
     @include breakpoint('<=small') {
         flex-direction: column;
     }
-
+    
     .image {
         flex-grow: 1;
         @include breakpoint('>small') {

@@ -1,6 +1,8 @@
 @import 'assets/styles/main.scss';
 
 #introContainer {
+    position: relative;
+    
     .content {
         display: flex;
         @include breakpoint('<=small') {

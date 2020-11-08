@@ -5,9 +5,10 @@ import './styles.scss';
 const projectSkill = () => {
     return (
         <div id="skillsContainer">
+            <h1>技能</h1>
             <div className="content">
                 <div className="section">
-                    <h1>參與專案</h1>
+                    <h2>參與專案</h2>
                     <div className="list">
                         <p>光學式捲帶料件記數系統</p>
                         <p>Memory controller testing pattern 維護</p>
@@ -18,8 +19,7 @@ const projectSkill = () => {
                     </div>
                 </div>
                 <div className="section">
-                    <h1>技能</h1>
-
+                    <h2>能力</h2>
                     <div className="list">
                         <p>影像處理演算法設計與應用</p>
                         <p>C#應用程式設計</p>

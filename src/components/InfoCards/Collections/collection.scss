@@ -1,6 +1,8 @@
 @import 'assets/styles/main.scss';
 
 #collectionContainer {
+    position: relative;
+    
     .content {
         .section {
             display: flex;
@@ -24,11 +26,6 @@
             }
             .description {
                 flex: 1 0 30%;
-                h2 {
-                    @include breakpoint('<=small') {
-                        text-align: center;
-                    }
-                }
             }
         }
     }

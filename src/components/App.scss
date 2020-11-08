@@ -20,6 +20,12 @@ h1 {
     padding: 0 0.75em 0.5em 0;
     margin-bottom: 1em;
     border-bottom: solid 3px _palette(accent1);
+    @include breakpoint('<=small') {
+        padding: 0 0.75em 0.5em 0.75em;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 span {
@@ -36,6 +42,11 @@ img {
 
 p {
     margin: 0 0 0.8em 0;
+    line-height: 1.5em;
+    color: _palette(text);
+}
+
+li {
     line-height: 1.5em;
     color: _palette(text);
 }

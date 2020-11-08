@@ -5,9 +5,10 @@ import './styles.scss';
 const intro = () => {
     return (
         <div id="introContainer">
+            <h1>簡介</h1>
             <div className="content">
                 <div className="section intro">
-                    <h1>簡介</h1>
+                    <h2>關於我</h2>
                     <p>我是Joseph曾俊霖，主要經歷為軟/韌體開發，擅長有邏輯地分析與解決問題，喜歡嘗試新的技術與方法。</p>
                     <p>
                         參與過嵌入式系統產品的規劃與開發，在工作上多使用C開發維護driver，在解決問題的過程中，更深入了解系統底層的工作方式。
@@ -20,7 +21,7 @@ const intro = () => {
                     <p>期待往後自己的技術更精進，並持續開發出有趣的作品</p>
                 </div>
                 <div className="section interest">
-                    <h1>興趣</h1>
+                    <h2>興趣</h2>
                     <p>旅遊</p>
                     <p>攝影</p>
                     <p>滑雪</p>

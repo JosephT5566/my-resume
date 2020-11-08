@@ -6,9 +6,10 @@ import './expertise.scss';
 const expertise = () => {
     return (
         <div id="expertiseContainer">
+                <h1>專長</h1>
             <div className="content">
                 <div className="section">
-                    <h1>Language</h1>
+                    <h2>擅長語言</h2>
                     <div className="list">
                         <p>C</p>
                         <p>C#</p>
@@ -19,7 +20,7 @@ const expertise = () => {
                     </div>
                 </div>
                 <div className="section">
-                    <h1>Tools & Environment</h1>
+                    <h2>使用工具與環境</h2>
                     <div className="list">
                         <p>Visual Studio Code</p>
                         <p>Git</p>
@@ -32,7 +33,7 @@ const expertise = () => {
                 </div>
                 <div className="section">
                     <div className="list">
-                        <h1>OS</h1>
+                        <h2>作業系統</h2>
                         <p>Windows</p>
                         <p>Linux</p>
                     </div>

@@ -1,6 +1,8 @@
 @import 'assets/styles/main.scss';
 
 #educationContainer {
+    position: relative;
+
     .accordionSummary {
         padding: 0;
     }
@@ -19,6 +21,9 @@
         .title {
             display: flex;
             justify-content: space-between;
+            @include breakpoint('<=small') {
+                flex-direction: column;
+            }
             > h3 {
                 margin: 0;
             }
