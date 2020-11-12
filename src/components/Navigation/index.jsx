@@ -4,6 +4,7 @@ import Scroll from 'react-scroll';
 import PositionContext from '../../contexts/PositionContext';
 import IndexContext from '../../contexts/IndexContext';
 import ScrollyButton from './ScrollyButton';
+import MenuIcon from '@material-ui/icons/Menu';
 
 import './styles.scss';
 
@@ -11,9 +12,10 @@ const scroll = Scroll.animateScroll;
 
 export default function Navigation() {
     const [isClicked, setIsClicked] = useState(false);
+    const [active, setActive] = useState(false);
     const { positions, basePoint } = useContext(PositionContext);
     const { onIndexChange } = useContext(IndexContext);
-    let isScrolling;
+    const activeClass = active ? 'active' : 'inactive';
 
     useEffect(() => {
         // console.log('nav button is Clicked: ', isClicked);
@@ -43,19 +45,20 @@ export default function Navigation() {
         'scroll',
         (event) => {
             checkCurrentIndex(document.documentElement.scrollTop);
-            // Clear our timeout throughout the scroll
-            clearTimeout(isScrolling);
-            // Set a timeout to run after scrolling ends
-            isScrolling = setTimeout(function () {
-                // Run the callback
-                if (isClicked) setIsClicked(false);
-            }, 250);
         },
         false
     );
 
     return (
-        <section id="sidebar">
+        <section id="sidebar" className={`${activeClass}`}>
+            <button
+                id="menuButton"
+                onClick={() => {
+                    setActive((prev) => !prev);
+                }}
+            >
+                <MenuIcon className="icon" />
+            </button>
             <div className="inner">
                 <nav>
                     <ul>
