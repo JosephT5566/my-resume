@@ -1,0 +1,10 @@
+name = "my-resume"
+type = "webpack"
+account_id = "1f7783c7c3c593ab98bad669c80ae933"
+workers_dev = true
+routes = ["josephtseng-tw.com/*", "www.josephtseng-tw.com/*"]
+zone_id = "a3d90b71b4797dd1aece4f5966dc20d6"
+
+[site]
+bucket = "./build"
+entry-point = "workers-site"
