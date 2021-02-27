@@ -28,6 +28,12 @@ export default function Works() {
         });
     };
 
+    const handleClickAwayPanel4 = () => {
+        setExpanded((prev) => {
+            return prev === 'panel4' ? false : prev;
+        });
+    };
+
     const handleChange = (panel) => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);
     };
@@ -74,6 +80,19 @@ export default function Works() {
                             <p>參與韌體開發流程</p>
                             <p>Embedded system driver 的開發與維護</p>
                             <p>孰悉 ARM Cortex-m4 Spec 以及用在 Embedded system 上的指令與特性</p>
+                        </div>
+                    </AccordionDetails>
+                </Accordion>
+            </ClickAwayListener>
+            <ClickAwayListener onClickAway={handleClickAwayPanel4}>
+                <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+                    <AccordionSummary className="accordionSummary" expandIcon={<ExpandMoreIcon fontSize="large" />}>
+                        <div className="accordionTitle">Aetheras, 軟體工程師, Aug 2020 ~ Now</div>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <div className="transitionPanel">
+                            <p>前端RWD SPA網頁開發 (React)</p>
+                            <p>後端API開發 (Golang)</p>
                         </div>
                     </AccordionDetails>
                 </Accordion>
