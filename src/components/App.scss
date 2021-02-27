@@ -1,0 +1,98 @@
+@import 'assets/styles/main.scss';
+
+@font-face {
+    font-family: Huninn;
+    src: local('FiraSans'), url(../assets/fonts/jf-openhuninn-1.1/jf-openhuninn-1.1.ttf) format('truetype');
+}
+
+* {
+    font-family: _font(family);
+    font-size: 15px;
+    color: _palette(bg-dark);
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: _font(family);
+}
+
+h1 {
+    display: inline-block;
+    padding: 0 0.75em 0.5em 0;
+    margin-bottom: 1em;
+    border-bottom: solid 3px _palette(accent1);
+    @include breakpoint('<=small') {
+        padding: 0 0.75em 0.5em 0.75em;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+span {
+    color: _palette(bg-alt);
+    cursor: pointer;
+    &:hover {
+        color: _palette(bg-dark);
+    }
+}
+
+img {
+    border-radius: 0.5em;
+}
+
+p {
+    margin: 0 0 0.8em 0;
+    line-height: 1.5em;
+    color: _palette(text);
+}
+
+li {
+    line-height: 1.5em;
+    color: _palette(text);
+}
+
+.ui.container {
+    margin-top: 15px;
+}
+
+#app {
+    display: flex;
+    #content{
+        background-color: _palette(fg);
+        margin-left: _size(sidebar-width);
+        width: 100%;
+        @include breakpoint('<=large') {
+            margin-left: 0;
+            margin-top: _size(sidebar-height);
+        }
+        @include breakpoint('<=small') {
+            margin: 0;
+        }
+    }
+}
+
+.MuiPaper-elevation1 {
+    box-shadow: none !important;
+}
+
+.MuiPaper-root {
+    background-color: inherit !important;
+}
+
+.MuiAccordion-root.Mui-expanded {
+    margin: 0;
+}
+
+.MuiAccordion-root {
+    &::before {
+        background-color: inherit !important;
+    }
+}
+
+.MuiAccordionSummary-root {
+    flex-direction: row-reverse;
+}
+
+.MuiIconButton-root {
+    margin-right: 0.3em !important;
+}

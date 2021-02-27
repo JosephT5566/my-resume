@@ -1,0 +1,19 @@
+@import 'assets/styles/main.scss';
+
+#worksContainer {
+    position: relative;
+    .accordionSummary {
+        padding: 0;
+    }
+    .accordionTitle {
+        display: flex;
+        align-items: center;
+        color: _palette(bg-alt);
+        line-height: 1.5em;
+        cursor: pointer;
+        font-size: 1.6em;
+        &:hover {
+            color: _palette(bg-dark);
+        }
+    }
+}

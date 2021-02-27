@@ -1,15 +1,27 @@
-import './App.css';
+import './App.scss';
 import '../assets/fonts/jf-openhuninn-1.1/jf-openhuninn-1.1.ttf';
 
 import React from 'react';
+import { CurrentIndexStore } from '../contexts/IndexContext';
+import { PositionStore } from '../contexts/PositionContext';
 
-import ResumeCardList from './ResumeCardList';
+import Main from './Main';
+import Navigation from './Navigation';
+import Footer from './Footer';
 
 class App extends React.Component {
     render() {
         return (
-            <div className="ui container">
-                <ResumeCardList/>
+            <div id="app">
+                <PositionStore>
+                    <CurrentIndexStore>
+                        <Navigation />
+                        <div id="content">
+                            <Main />
+                            <Footer />
+                        </div>
+                    </CurrentIndexStore>
+                </PositionStore>
             </div>
         );
     }

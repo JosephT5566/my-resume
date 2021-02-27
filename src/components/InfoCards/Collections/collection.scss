@@ -1,0 +1,32 @@
+@import 'assets/styles/main.scss';
+
+#collectionContainer {
+    position: relative;
+    
+    .content {
+        .section {
+            display: flex;
+            @include breakpoint('<=small') {
+                flex-direction: column;
+            }
+            .image {
+                flex: 1 0 60%;
+                img {
+                    width: 100%;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                @include breakpoint('>small') {
+                    padding-right: 2em;
+                }
+                @include breakpoint('<=small') {
+                    margin-bottom: 2em;
+                }
+            }
+            .description {
+                flex: 1 0 30%;
+            }
+        }
+    }
+}

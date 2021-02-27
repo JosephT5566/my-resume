@@ -1,0 +1,23 @@
+@import 'assets/styles/main.scss';
+
+#expertiseContainer {
+    position: relative;
+    p {
+        margin: 0 0 0.5em;
+    }
+
+    .content {
+        display: flex;
+        @include breakpoint('<=small') {
+            flex-direction: column;
+        }
+        .section {
+            flex: 1 0 30%;
+            padding-right: 2em;
+            line-height: 1.5em;
+            @include breakpoint('<=small') {
+                margin: 0 0 2.5em 0;
+            }
+        }
+    }
+}

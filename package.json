@@ -5,13 +5,19 @@
   "homepage": "https://JosephT5566.github.io/my-resume",
   "dependencies": {
     "@material-ui/core": "^4.10.2",
+    "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "lodash": "^4.17.20",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "react-transition-group": "^4.4.1"
+    "react-scroll": "^1.8.1",
+    "react-scroll-trigger": "^0.6.9",
+    "react-transition-group": "^4.4.1",
+    "sass": "^1.26.11",
+    "semantic-ui-react": "^2.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

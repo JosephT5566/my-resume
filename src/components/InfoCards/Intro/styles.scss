@@ -1,0 +1,27 @@
+@import 'assets/styles/main.scss';
+
+#introContainer {
+    position: relative;
+    
+    .content {
+        display: flex;
+        @include breakpoint('<=small') {
+            flex-direction: column;
+        }
+        .section {
+            line-height: 1.5em;
+            @include breakpoint('>small') {
+                padding-right: 2em;
+            }
+            @include breakpoint('<=small') {
+                margin: 0 0 2.5em 0;
+            }
+            &.intro {
+                flex: 1 0 66%;
+            }
+            &.interest {
+                flex: 1 0 33%;
+            }
+        }
+    }
+}
