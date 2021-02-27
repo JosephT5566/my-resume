@@ -6,17 +6,14 @@ export default function ScrollyButton({ label, index, isClicked, onClick = null 
     const isActivatable = () => index === currentIndex;
     const active = isActivatable() ? 'active' : '';
 
-    // useEffect(() => {}, [isClicked]);
-
     return (
-        <a
-            href="/#"
+        <div
             className={`scrolly ${active}`}
             onClick={() => {
                 if (onClick) onClick();
             }}
         >
             {label}
-        </a>
+        </div>
     );
 }
