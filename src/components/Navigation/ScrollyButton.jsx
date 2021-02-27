@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import CurrentIndexContext from '../../contexts/IndexContext';
 
 export default function ScrollyButton({ label, index, isClicked, onClick = null }) {
@@ -10,6 +10,7 @@ export default function ScrollyButton({ label, index, isClicked, onClick = null 
 
     return (
         <a
+            href="/#"
             className={`scrolly ${active}`}
             onClick={() => {
                 if (onClick) onClick();

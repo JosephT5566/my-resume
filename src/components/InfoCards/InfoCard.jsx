@@ -9,7 +9,7 @@ export default function InfoCard({ id, setTop, children }) {
         setTop((preValue) => {
             return { ...preValue, [id]: cardRef.current.getBoundingClientRect().top };
         });
-    }, []);
+    }, [id, setTop]);
 
     return (
         <div id="infoCard" ref={cardRef}>

@@ -18,8 +18,8 @@ export default function Menu() {
     useEffect(() => {
         // console.log('element top: ', elementTop);
         onPositionChange(elementTop);
-        onBasePointChange(document.documentElement.scrollTop)
-    }, [elementTop]);
+        onBasePointChange(document.documentElement.scrollTop);
+    }, [elementTop, onPositionChange, onBasePointChange]);
 
     return (
         <div className="ui container">

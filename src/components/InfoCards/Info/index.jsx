@@ -13,7 +13,7 @@ const personalInfo = () => {
     return (
         <div id="infoContainer">
             <div className="image">
-                <img src={personalShot} alt="personal photo" style={{ width: '100%' }} />
+                <img src={personalShot} alt="personal" style={{ width: '100%' }} />
             </div>
             <div className="content">
                 <h1>曾俊霖</h1>

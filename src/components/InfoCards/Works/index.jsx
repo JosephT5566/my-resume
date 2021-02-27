@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { CSSTransition } from 'react-transition-group';
 import { ClickAwayListener } from '@material-ui/core';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
