@@ -8,24 +8,27 @@ const Expertise = () => {
                 <h1>專長</h1>
             <div className="content">
                 <div className="section">
-                    <h2>擅長語言</h2>
+                    <h2>語言</h2>
                     <div className="list">
+                        <p>JavaScript</p>
+                        <p>Golang</p>
+                        <p>SQL (Postgre / MySQL / SQL anywhere)</p>
+                        <p>PHP</p>
                         <p>C</p>
                         <p>C#</p>
-                        <p>Linux shell script</p>
-                        <p>SQL (MySQL / SQL anywhere)</p>
-                        <p>PHP</p>
-                        <p>JavaScript / jQuery / AJAX</p>
+                        <p>Shell script</p>
                     </div>
                 </div>
                 <div className="section">
-                    <h2>使用工具與環境</h2>
+                    <h2>工具與環境</h2>
                     <div className="list">
-                        <p>Visual Studio Code</p>
+                        <p>React</p>
                         <p>Git</p>
-                        <p>.Net Framework</p>
-                        <p>React.js</p>
+                        <p>Docker</p>
                         <p>PHP</p>
+                        <p>Google cloud platform</p>
+                        <p>Visual Studio Code</p>
+                        <p>.Net Framework</p>
                         <p>Ceedling</p>
                         <p>Qt</p>
                     </div>
