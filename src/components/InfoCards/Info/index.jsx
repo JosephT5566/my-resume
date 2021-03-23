@@ -9,7 +9,7 @@ import personalShot from 'assets/images/personal_shot.jpg';
 
 import './styles.scss';
 
-const personalInfo = () => {
+const PersonalInfo = () => {
     return (
         <div id="infoContainer">
             <div className="image">
@@ -58,4 +58,4 @@ const personalInfo = () => {
     );
 };
 
-export default personalInfo;
+export default PersonalInfo;

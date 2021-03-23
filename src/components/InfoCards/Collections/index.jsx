@@ -4,7 +4,7 @@ import collectionImage1 from 'assets/images/collection1.jpg';
 
 import './collection.scss';
 
-const collection = () => {
+const Collection = () => {
     return (
         <div id="collectionContainer">
             <h1>作品</h1>
@@ -33,4 +33,4 @@ const collection = () => {
     );
 };
 
-export default collection;
+export default Collection;

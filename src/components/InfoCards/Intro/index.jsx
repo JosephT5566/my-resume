@@ -2,7 +2,7 @@ import React from 'react';
 
 import './styles.scss';
 
-const intro = () => {
+const Intro = () => {
     return (
         <div id="introContainer">
             <h1>簡介</h1>
@@ -33,4 +33,4 @@ const intro = () => {
     );
 };
 
-export default intro;
+export default Intro;
