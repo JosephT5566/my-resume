@@ -64,7 +64,6 @@ export default function Navigation() {
 					<MenuIcon className="icon" />
 				</button>
 				<div className="inner">
-					<button onClick={() => console.log(('positions', positions))}>view</button>
 					<nav>
 						<ul>
 							<li>
