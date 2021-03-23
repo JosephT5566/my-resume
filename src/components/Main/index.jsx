@@ -12,38 +12,38 @@ import Works from '../InfoCards/Works';
 import InfoCard from '../InfoCards/InfoCard';
 
 export default function Menu() {
-    const { onPositionChange, onBasePointChange } = useContext(PositionContext);
-    const [elementTop, setElementTop] = useState({});
+	const { onPositionChange, onBasePointChange } = useContext(PositionContext);
+	const [elementTop, setElementTop] = useState({});
 
-    useEffect(() => {
-        // console.log('element top: ', elementTop);
-        onPositionChange(elementTop);
-        onBasePointChange(document.documentElement.scrollTop)
-    }, [elementTop]);
+	useEffect(() => {
+		// console.log('element top: ', elementTop);
+		onPositionChange(elementTop);
+		onBasePointChange(document.documentElement.scrollTop);
+	}, [elementTop, onPositionChange, onBasePointChange]);
 
-    return (
-        <div className="ui container">
-            <InfoCard id={0} setTop={setElementTop}>
-                <Info />
-            </InfoCard>
-            <InfoCard id={1} setTop={setElementTop}>
-                <Educations />
-            </InfoCard>
-            <InfoCard id={2} setTop={setElementTop}>
-                <Works />
-            </InfoCard>
-            <InfoCard id={3} setTop={setElementTop}>
-                <Expertises />
-            </InfoCard>
-            <InfoCard id={4} setTop={setElementTop}>
-                <Skills />
-            </InfoCard>
-            <InfoCard id={5} setTop={setElementTop}>
-                <Intro />
-            </InfoCard>
-            <InfoCard id={6} setTop={setElementTop}>
-                <Collections />
-            </InfoCard>
-        </div>
-    );
+	return (
+		<div className="ui container">
+			<InfoCard id={0} setTop={setElementTop}>
+				<Info />
+			</InfoCard>
+			<InfoCard id={1} setTop={setElementTop}>
+				<Educations />
+			</InfoCard>
+			<InfoCard id={2} setTop={setElementTop}>
+				<Works />
+			</InfoCard>
+			<InfoCard id={3} setTop={setElementTop}>
+				<Expertises />
+			</InfoCard>
+			<InfoCard id={4} setTop={setElementTop}>
+				<Skills />
+			</InfoCard>
+			<InfoCard id={5} setTop={setElementTop}>
+				<Intro />
+			</InfoCard>
+			<InfoCard id={6} setTop={setElementTop}>
+				<Collections />
+			</InfoCard>
+		</div>
+	);
 }

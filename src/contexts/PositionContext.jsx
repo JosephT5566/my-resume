@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const Context = React.createContext(null); // default value
 
@@ -13,14 +13,6 @@ export function PositionStore(props) {
     const onBasePointChange = (position) => {
         setBasePoint(position);
     };
-
-    // useEffect(() => {
-    //     console.log('positions in context: ', positions);
-    // }, [positions]);
-
-    // useEffect(() => {
-    //     console.log('base point in context: ', basePoint);
-    // }, [basePoint]);
 
     return (
         <Context.Provider value={{ positions, onPositionChange, basePoint, onBasePointChange }}>
