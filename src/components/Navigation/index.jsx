@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react';
-// import Scroll from 'react-scroll';
 
 import PositionContext from '../../contexts/PositionContext';
 import IndexContext from '../../contexts/IndexContext';
@@ -8,8 +7,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 
 import './styles.scss';
-
-// const scroll = Scroll.animateScroll;
 
 export default function Navigation() {
 	const [isClicked, setIsClicked] = useState(false);
