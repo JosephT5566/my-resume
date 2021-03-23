@@ -7,13 +7,13 @@ export default function ScrollyButton({ label, index, onClick = null }) {
     const active = isActivatable() ? 'active' : '';
 
     return (
-        <a
+        <button
             className={`scrolly ${active}`}
             onClick={() => {
                 if (onClick) onClick();
             }}
         >
             {label}
-        </a>
+        </button>
     );
 }

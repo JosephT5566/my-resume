@@ -61,19 +61,21 @@
             }
         }
 
-        a {
+        button {
             transition: color #{_duration(transition)} ease;
             border: 0;
+            background-color: inherit;
             color: _palette(fg-light);
+            width: 100%;
             display: block;
             font-size: 0.6em;
             font-weight: _font(weight-bold);
+            text-align: left;
             letter-spacing: _font(kerning-alt);
             line-height: 1.75;
             outline: 0;
             padding: 1.35em 0;
             position: relative;
-            text-decoration: none;
             text-transform: uppercase;
 
             &:before,
@@ -103,6 +105,7 @@
 
             &:hover {
                 color: _palette(fg);
+                cursor: pointer;
             }
 
             &.active {

@@ -10,7 +10,7 @@ import Works from '../InfoCards/Works';
 
 import InfoCard from '../InfoCards/InfoCard';
 
-export default function Menu() {
+export default function Main() {
 	return (
 		<div className="ui container">
 			<InfoCard id={0}>
