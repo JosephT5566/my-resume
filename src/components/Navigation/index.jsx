@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext, useEffect, useCallback } from 'react';
 import Scroll from 'react-scroll';
 
 import PositionContext from '../../contexts/PositionContext';
@@ -17,37 +17,33 @@ export default function Navigation() {
     const { onIndexChange } = useContext(IndexContext);
     const activeClass = active ? 'active' : 'inactive';
 
+    const handleScroll = useCallback(() => {
+        const checkCurrentIndex = (scrollTop) => {
+            let index = 0;
+            let correctPoint = scrollTop - basePoint;
+            if (correctPoint > positions[0] && correctPoint < positions[1]) {
+                index = 1;
+            } else if (correctPoint > positions[1] && correctPoint < positions[2]) {
+                index = 2;
+            } else if (correctPoint > positions[2] && correctPoint < positions[3]) {
+                index = 3;
+            } else if (correctPoint > positions[3] && correctPoint < positions[4]) {
+                index = 4;
+            } else if (correctPoint > positions[4] && correctPoint < positions[5]) {
+                index = 5;
+            } else if (correctPoint > positions[5] && correctPoint < positions[6]) {
+                index = 6;
+            }
+            onIndexChange(index);
+        };
+
+        checkCurrentIndex(document.documentElement.scrollTop);
+    }, [positions, basePoint, onIndexChange]);
+
     useEffect(() => {
-        // console.log('nav button is Clicked: ', isClicked);
-    }, [isClicked]);
-
-    const checkCurrentIndex = (scrollTop) => {
-        // console.log(scrollTop)
-        let index = 0;
-        let correctPoint = scrollTop - basePoint;
-        if (correctPoint > positions[0] && correctPoint < positions[1]) {
-            index = 1;
-        } else if (correctPoint > positions[1] && correctPoint < positions[2]) {
-            index = 2;
-        } else if (correctPoint > positions[2] && correctPoint < positions[3]) {
-            index = 3;
-        } else if (correctPoint > positions[3] && correctPoint < positions[4]) {
-            index = 4;
-        } else if (correctPoint > positions[4] && correctPoint < positions[5]) {
-            index = 5;
-        } else if (correctPoint > positions[5] && correctPoint < positions[6]) {
-            index = 6;
-        }
-        onIndexChange(index);
-    };
-
-    window.addEventListener(
-        'scroll',
-        (event) => {
-            checkCurrentIndex(document.documentElement.scrollTop);
-        },
-        false
-    );
+        window.addEventListener('scroll', () => handleScroll());
+        return window.removeEventListener('scroll', () => handleScroll());
+    }, [handleScroll]);
 
     return (
         <section id="sidebar" className={`${activeClass}`}>
