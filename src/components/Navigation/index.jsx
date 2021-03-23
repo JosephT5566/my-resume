@@ -16,9 +16,9 @@ export default function Navigation() {
 	const activeClass = active ? 'active' : 'inactive';
 
 	const checkCurrentIndex = (scrollTop) => {
-		let index = 6;
+		let index = 0;
 		let correctPoint = scrollTop;
-		if (correctPoint >= positions[0] && correctPoint < positions[1]) {
+		if (correctPoint >= 0 && correctPoint < positions[1]) {
 			index = 0;
 		} else if (correctPoint >= positions[1] && correctPoint < positions[2]) {
 			index = 1;
@@ -30,6 +30,8 @@ export default function Navigation() {
 			index = 4;
 		} else if (correctPoint >= positions[5] && correctPoint < positions[6]) {
 			index = 5;
+		} else if (correctPoint >= positions[6]) {
+			index = 6;
 		}
 		onIndexChange(index);
 	};
