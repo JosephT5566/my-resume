@@ -2,7 +2,7 @@ import React from 'react';
 
 import './styles.scss';
 
-const projectSkill = () => {
+const ProjectSkill = () => {
     return (
         <div id="skillsContainer">
             <h1>技能</h1>
@@ -33,4 +33,4 @@ const projectSkill = () => {
     );
 };
 
-export default projectSkill;
+export default ProjectSkill;

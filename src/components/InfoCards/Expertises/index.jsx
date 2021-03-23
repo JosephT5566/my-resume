@@ -1,9 +1,8 @@
 import React from 'react';
-// import image1 from 'assets/images/image1.jpg';
 
 import './expertise.scss';
 
-const expertise = () => {
+const Expertise = () => {
     return (
         <div id="expertiseContainer">
                 <h1>專長</h1>
@@ -46,4 +45,4 @@ const expertise = () => {
     );
 };
 
-export default expertise;
+export default Expertise;

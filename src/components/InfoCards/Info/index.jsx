@@ -9,28 +9,28 @@ import personalShot from 'assets/images/personal_shot.jpg';
 
 import './styles.scss';
 
-const personalInfo = () => {
+const PersonalInfo = () => {
     return (
         <div id="infoContainer">
             <div className="image">
-                <img src={personalShot} alt="personal" style={{ width: '100%' }} />
+                <img src={personalShot} alt="profile" style={{ width: '100%' }} />
             </div>
             <div className="content">
                 <h1>曾俊霖</h1>
                 <div className="item">
-                    <CakeIcon className="icon" fontSize="medium" />
+                    <CakeIcon className="icon" fontSize="small" />
                     1992/03/04
                 </div>
                 <div className="item">
-                    <LocationOnIcon className="icon" fontSize="medium" />
+                    <LocationOnIcon className="icon" fontSize="small" />
                     新竹縣竹北市
                 </div>
                 <div className="item">
-                    <MailIcon className="icon" fontSize="medium" />
+                    <MailIcon className="icon" fontSize="small" />
                     zxp930110@hotmail.com.tw
                 </div>
                 <div className="item">
-                    <PhoneIcon className="icon" fontSize="medium" />
+                    <PhoneIcon className="icon" fontSize="small" />
                     0928746335
                 </div>
                 <div className="socialLink">
@@ -58,4 +58,4 @@ const personalInfo = () => {
     );
 };
 
-export default personalInfo;
+export default PersonalInfo;
