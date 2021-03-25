@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 const Context = React.createContext(null); // default value
 
 export function CurrentIndexStore(props) {
-    const [currentIndex, setCurrentIndex] = useState(null);
+    const [currentIndex, setCurrentIndex] = useState(0);
     const onIndexChange = (currentIndex) => setCurrentIndex(currentIndex);
 
     return (

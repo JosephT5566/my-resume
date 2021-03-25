@@ -9,7 +9,6 @@ import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import './styles.scss';
 
 export default function Navigation() {
-	const [isClicked, setIsClicked] = useState(false);
 	const [active, setActive] = useState(false);
 	const { positions } = useContext(PositionContext);
 	const { onIndexChange } = useContext(IndexContext);
@@ -17,21 +16,23 @@ export default function Navigation() {
 
 	const checkCurrentIndex = (scrollTop) => {
 		let index = 0;
-		let correctPoint = scrollTop;
-		if (correctPoint >= 0 && correctPoint < positions[1]) {
-			index = 0;
-		} else if (correctPoint >= positions[1] && correctPoint < positions[2]) {
-			index = 1;
-		} else if (correctPoint >= positions[2] && correctPoint < positions[3]) {
-			index = 2;
-		} else if (correctPoint >= positions[3] && correctPoint < positions[4]) {
-			index = 3;
-		} else if (correctPoint >= positions[4] && correctPoint < positions[5]) {
-			index = 4;
-		} else if (correctPoint >= positions[5] && correctPoint < positions[6]) {
-			index = 5;
-		} else if (correctPoint >= positions[6]) {
-			index = 6;
+		scrollTop += 2;
+		try {
+			if (scrollTop - positions[6].current.offsetTop > 0) {
+				index = 6;
+			} else if (scrollTop - positions[5].current.offsetTop > 0) {
+				index = 5;
+			} else if (scrollTop - positions[4].current.offsetTop > 0) {
+				index = 4;
+			} else if (scrollTop - positions[3].current.offsetTop > 0) {
+				index = 3;
+			} else if (scrollTop - positions[2].current.offsetTop > 0) {
+				index = 2;
+			} else if (scrollTop - positions[1].current.offsetTop > 0) {
+				index = 1;
+			}
+		} catch (error) {
+			return;
 		}
 		onIndexChange(index);
 	};
@@ -72,11 +73,9 @@ export default function Navigation() {
 								<ScrollyButton
 									label="Info"
 									index={0}
-									isClicked={isClicked}
 									onClick={() => {
-										setIsClicked(true);
 										handleButtonClicked();
-										window.scrollTo({ behavior: 'smooth', top: positions[0] });
+										positions[0].current.scrollIntoView({ behavior: 'smooth' });
 									}}
 								/>
 							</li>
@@ -84,11 +83,9 @@ export default function Navigation() {
 								<ScrollyButton
 									label="Educations"
 									index={1}
-									isClicked={isClicked}
 									onClick={() => {
-										setIsClicked(true);
 										handleButtonClicked();
-										window.scrollTo({ behavior: 'smooth', top: positions[1] });
+										positions[1].current.scrollIntoView({ behavior: 'smooth' });
 									}}
 								/>
 							</li>
@@ -96,11 +93,9 @@ export default function Navigation() {
 								<ScrollyButton
 									label="Works"
 									index={2}
-									isClicked={isClicked}
 									onClick={() => {
-										setIsClicked(true);
 										handleButtonClicked();
-										window.scrollTo({ behavior: 'smooth', top: positions[2] });
+										positions[2].current.scrollIntoView({ behavior: 'smooth' });
 									}}
 								/>
 							</li>
@@ -108,11 +103,9 @@ export default function Navigation() {
 								<ScrollyButton
 									label="Expertises"
 									index={3}
-									isClicked={isClicked}
 									onClick={() => {
-										setIsClicked(true);
 										handleButtonClicked();
-										window.scrollTo({ behavior: 'smooth', top: positions[3] });
+										positions[3].current.scrollIntoView({ behavior: 'smooth' });
 									}}
 								/>
 							</li>
@@ -120,11 +113,9 @@ export default function Navigation() {
 								<ScrollyButton
 									label="Skills"
 									index={4}
-									isClicked={isClicked}
 									onClick={() => {
-										setIsClicked(true);
 										handleButtonClicked();
-										window.scrollTo({ behavior: 'smooth', top: positions[4] });
+										positions[4].current.scrollIntoView({ behavior: 'smooth' });
 									}}
 								/>
 							</li>
@@ -132,11 +123,9 @@ export default function Navigation() {
 								<ScrollyButton
 									label="Introduction"
 									index={5}
-									isClicked={isClicked}
 									onClick={() => {
-										setIsClicked(true);
 										handleButtonClicked();
-										window.scrollTo({ behavior: 'smooth', top: positions[5] });
+										positions[5].current.scrollIntoView({ behavior: 'smooth' });
 									}}
 								/>
 							</li>
@@ -144,11 +133,9 @@ export default function Navigation() {
 								<ScrollyButton
 									label="Collections"
 									index={6}
-									isClicked={isClicked}
 									onClick={() => {
-										setIsClicked(true);
 										handleButtonClicked();
-										window.scrollTo({ behavior: 'smooth', top: positions[6] });
+										positions[6].current.scrollIntoView({ behavior: 'smooth' });
 									}}
 								/>
 							</li>
