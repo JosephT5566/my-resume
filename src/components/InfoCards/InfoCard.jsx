@@ -1,4 +1,4 @@
-import React, { useRef, useContext } from 'react';
+import React, { useRef, useEffect, useContext } from 'react';
 import PositionContext from '../../contexts/PositionContext';
 
 import './InfoCard.scss';
@@ -8,9 +8,11 @@ export default function InfoCard({ id, ...props }) {
 	const cardRef = useRef(null);
 	const offsetTop = cardRef.current ? cardRef.current.offsetTop : 0;
 
-	setTimeout(() => {
-		handlePositionSetting({ [id]: offsetTop });
-	});
+	useEffect(() => {
+		setTimeout(() => {
+			handlePositionSetting({ [id]: offsetTop });
+		});
+	}, [handlePositionSetting, id, offsetTop]);
 
 	return (
 		<div id="infoCard" ref={cardRef}>
