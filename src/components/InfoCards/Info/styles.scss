@@ -27,6 +27,7 @@
 
     .content {
         flex: 1 0 35%;
+        position: relative;
         .item {
             display: flex;
             align-items: center;
@@ -43,6 +44,10 @@
 
     .socialLink {
         padding: 2em 0 0 0;
+        @include breakpoint('>small') {
+            position: absolute;
+            bottom: 0;
+        }
         @include breakpoint('<=small') {
             text-align: center;
         }

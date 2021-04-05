@@ -5,7 +5,7 @@ import collectionImage1 from 'assets/images/collection1.jpg';
 import './collection.scss';
 
 const Preview = ({ title, description, image, url, ...props }) => (
-    <a className="section" href={url}>
+    <a className="section" href={url} target="_blank">
         <div className="image">
             <img src={image} alt="collectionImg" />
         </div>
