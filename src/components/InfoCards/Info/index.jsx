@@ -5,7 +5,7 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import MailIcon from '@material-ui/icons/Mail';
 import PhoneIcon from '@material-ui/icons/Phone';
 
-import personalShot from 'assets/images/personal_shot.jpg';
+import personalShot from 'assets/images/profile.jpg';
 
 import './styles.scss';
 
