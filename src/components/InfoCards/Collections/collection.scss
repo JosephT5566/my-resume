@@ -2,10 +2,11 @@
 
 #collectionContainer {
     position: relative;
-    
+
     .content {
         .section {
             display: flex;
+            margin-bottom: 2em;
             @include breakpoint('<=small') {
                 flex-direction: column;
             }

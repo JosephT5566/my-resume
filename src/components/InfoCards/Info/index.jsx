@@ -5,7 +5,7 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import MailIcon from '@material-ui/icons/Mail';
 import PhoneIcon from '@material-ui/icons/Phone';
 
-import personalShot from 'assets/images/personal_shot.jpg';
+import personalShot from 'assets/images/profile.jpg';
 
 import './styles.scss';
 
@@ -34,24 +34,15 @@ const PersonalInfo = () => {
                     0928746335
                 </div>
                 <div className="socialLink">
-                    <i
-                        className="linkedin icon"
-                        onClick={() => {
-                            window.open('https://www.linkedin.com/in/joseph-tseng-50ba36136');
-                        }}
-                    ></i>
-                    <i
-                        className="github icon"
-                        onClick={() => {
-                            window.open('https://github.com/JosephT5566');
-                        }}
-                    ></i>
-                    <i
-                        className="flickr icon"
-                        onClick={() => {
-                            window.open('https://www.flickr.com/photos/joseph-t_0304/');
-                        }}
-                    ></i>
+                    <a href={'https://www.linkedin.com/in/joseph-tseng-50ba36136'} target="_blank">
+                        <i className="linkedin icon"></i>
+                    </a>
+                    <a href={'https://github.com/JosephT5566'} target="_blank">
+                        <i className="github icon"></i>
+                    </a>
+                    <a href={'https://www.flickr.com/photos/joseph-t_0304/'} target="_blank">
+                        <i className="flickr icon"></i>
+                    </a>
                 </div>
             </div>
         </div>
