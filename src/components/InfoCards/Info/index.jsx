@@ -34,13 +34,17 @@ const PersonalInfo = () => {
                     0928746335
                 </div>
                 <div className="socialLink">
-                    <a href={'https://www.linkedin.com/in/joseph-tseng-50ba36136'} target="_blank">
+                    <a
+                        href={'https://www.linkedin.com/in/joseph-tseng-50ba36136'}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <i className="linkedin icon"></i>
                     </a>
-                    <a href={'https://github.com/JosephT5566'} target="_blank">
+                    <a href={'https://github.com/JosephT5566'} target="_blank" rel="noopener noreferrer">
                         <i className="github icon"></i>
                     </a>
-                    <a href={'https://www.flickr.com/photos/joseph-t_0304/'} target="_blank">
+                    <a href={'https://www.flickr.com/photos/joseph-t_0304/'} target="_blank" rel="noopener noreferrer">
                         <i className="flickr icon"></i>
                     </a>
                 </div>
