@@ -34,6 +34,13 @@ Wrangler deploys `dist/` using the static-assets configuration in
 npm run deploy
 ```
 
-GitHub Actions deploys every commit pushed to `master`. The repository must
-provide a `CF_API_TOKEN` secret with permission to deploy the configured Worker
-and routes.
+GitHub Actions deploys every commit pushed to `master`. Configure these values
+under **Settings > Secrets and variables > Actions**:
+
+- Secret `CF_API_TOKEN`: Create an Account API token using Cloudflare's
+  **Edit Cloudflare Workers** permission policy. Restrict it to the account and
+  `josephtseng-tw.com` zone used by this project.
+- Variable `CF_ACCOUNT_ID`: `1f7783c7c3c593ab98bad669c80ae933`
+
+Do not use a Global API Key or copy the token ID/name. The secret must contain
+the token value displayed when the API token is created.
