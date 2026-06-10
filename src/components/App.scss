@@ -1,4 +1,4 @@
-@import 'assets/styles/main.scss';
+@use 'assets/styles/main.scss' as *;
 
 @font-face {
     font-family: Huninn;
@@ -6,20 +6,20 @@
 }
 
 * {
-    font-family: _font(family);
+    font-family: font(family);
     font-size: 15px;
-    color: _palette(bg-dark);
+    color: palette(bg-dark);
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: _font(family);
+    font-family: font(family);
 }
 
 h1 {
     display: inline-block;
     padding: 0 0.75em 0.5em 0;
     margin-bottom: 1em;
-    border-bottom: solid 3px _palette(accent1);
+    border-bottom: solid 3px palette(accent1);
     @include breakpoint('<=small') {
         padding: 0 0.75em 0.5em 0.75em;
         position: relative;
@@ -29,10 +29,10 @@ h1 {
 }
 
 span {
-    color: _palette(bg-alt);
+    color: palette(bg-alt);
     cursor: pointer;
     &:hover {
-        color: _palette(bg-dark);
+        color: palette(bg-dark);
     }
 }
 
@@ -43,12 +43,12 @@ img {
 p {
     margin: 0 0 0.8em 0;
     line-height: 1.5em;
-    color: _palette(text);
+    color: palette(text);
 }
 
 li {
     line-height: 1.5em;
-    color: _palette(text);
+    color: palette(text);
 }
 
 .ui.container {
@@ -58,12 +58,12 @@ li {
 #app {
     display: flex;
     #content{
-        background-color: _palette(fg);
-        margin-right: _size(sidebar-width);
+        background-color: palette(fg);
+        margin-right: size(sidebar-width);
         width: 100%;
         @include breakpoint('<=large') {
             margin-right: 0;
-            margin-top: _size(sidebar-height);
+            margin-top: size(sidebar-height);
         }
         @include breakpoint('<=small') {
             margin: 0;

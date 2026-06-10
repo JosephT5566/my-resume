@@ -1,10 +1,10 @@
-import React, { useState, useContext } from 'react';
+import React, { useCallback, useContext, useEffect, useState } from 'react';
 
 import PositionContext from '../../contexts/PositionContext';
 import IndexContext from '../../contexts/IndexContext';
 import ScrollyButton from './ScrollyButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
+import MenuIcon from '@mui/icons-material/Menu';
+import ClickAwayListener from '@mui/material/ClickAwayListener';
 
 import './styles.scss';
 
@@ -14,7 +14,7 @@ export default function Navigation() {
 	const { onIndexChange } = useContext(IndexContext);
 	const activeClass = active ? 'active' : 'inactive';
 
-	const checkCurrentIndex = (scrollTop) => {
+	const checkCurrentIndex = useCallback((scrollTop) => {
 		let index = 0;
 		scrollTop += 2;
 		try {
@@ -35,15 +35,16 @@ export default function Navigation() {
 			return;
 		}
 		onIndexChange(index);
-	};
+	}, [onIndexChange, positions]);
 
-	window.addEventListener(
-		'scroll',
-		(event) => {
+	useEffect(() => {
+		const handleScroll = () => {
 			checkCurrentIndex(document.documentElement.scrollTop);
-		},
-		false
-	);
+		};
+
+		window.addEventListener('scroll', handleScroll, { passive: true });
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, [checkCurrentIndex]);
 
 	const handleClickAway = () => {
 		if (active) {

@@ -1,10 +1,12 @@
 name = "my-resume"
-type = "webpack"
 account_id = "1f7783c7c3c593ab98bad669c80ae933"
+compatibility_date = "2026-06-10"
 workers_dev = true
-routes = ["josephtseng-tw.com/*", "www.josephtseng-tw.com/*"]
-zone_id = "a3d90b71b4797dd1aece4f5966dc20d6"
+routes = [
+  { pattern = "josephtseng-tw.com/*", zone_name = "josephtseng-tw.com" },
+  { pattern = "www.josephtseng-tw.com/*", zone_name = "josephtseng-tw.com" }
+]
 
-[site]
-bucket = "./build"
-entry-point = "workers-site"
+[assets]
+directory = "./dist"
+not_found_handling = "single-page-application"

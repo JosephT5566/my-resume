@@ -1,25 +1,25 @@
-@import 'assets/styles/main.scss';
+@use 'assets/styles/main.scss' as *;
 
 // Footer
 
 #footer {
     > .inner {
         a {
-            color: _palette(accent2);
+            color: palette(accent2);
 
             &:hover {
-                color: _palette(accent2-alt);
+                color: palette(accent2-alt);
             }
         }
 
         .menu {
             font-size: 0.8em;
-            color: _palette(border);
+            color: palette(border);
         }
     }
 
     li {
-        color: _palette(fg);
+        color: palette(fg);
     }
 
     // #header + #wrapper + & {

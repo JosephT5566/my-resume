@@ -1,4 +1,4 @@
-@import 'assets/styles/main.scss';
+@use 'assets/styles/main.scss' as *;
 
 #infoContainer {
     display: flex;
@@ -36,7 +36,7 @@
                 // flex-direction: column;
             }
             .icon {
-                fill: _palette(accent1);
+                fill: palette(accent1);
                 margin-right: 1em;
             }
         }
@@ -53,10 +53,10 @@
         }
         i {
             font-size: 200%;
-            color: _palette(accent1);
+            color: palette(accent1);
             cursor: pointer;
             &:hover {
-                color: _palette(accent1-alt);
+                color: palette(accent1-alt);
             }
         }
     }

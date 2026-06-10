@@ -1,116 +1,39 @@
-https://JosephT5566.github.io/my-resume
+# My Resume
 
-## How to build a React-app to github homepage
+React resume site built with Vite and deployed to Cloudflare Workers static assets.
 
-1. `npx create-react-app app-name`
-2. `cd app-name`
-3. `npm start`
-4. `git init`
-5. `git remote add origin https://JosephT5566.github.io/app-name`
-6. `npm install gh-pages --save-dev`
-7. 在package.json中的script新增
-```json
-    "scripts": {
-    ...
-    "predeploy": "npm run build", // bundles React in production mode
-    "deploy": "gh-pages -d build" // do gh-pages things
-    }
-```
-8. 在package.json中新增
-`"homepage": "https://JosephT5566.github.io/app-name"`
-9. `npm run deploy` 可以在github的branch看到新的分支 `gh-pages`
+## Requirements
 
-## How to use CSSTransition
+- Node.js 22.12 or newer
+- npm 10 or newer
 
-[CSSTransition](http://reactcommunity.org/react-transition-group/css-transition#CSSTransition-props)
+## Development
 
-[Improve your UI with React Transition Group: A guide with examples](https://blog.logrocket.com/improve-your-ui-with-react-transition-group-999fa35f7cae/)
-
-### Installation
-
-```
-# npm
-npm install react-transition-group --save
-
-# yarn
-yarn add react-transition-group
+```bash
+npm ci
+npm run dev
 ```
 
-### Import
+Vite serves the site at `http://localhost:5173`.
 
-```js
-import CSSTransition from 'react-transition-group'
+## Production Build
+
+```bash
+npm run build
+npm run preview
 ```
 
-### Use
+The production files are written to `dist/`.
 
-使用component `CSSTransition`時，有幾個主要的`props`要設定
+## Deployment
 
-* `in`: boolean，控制element是否出現
-* `timeout`: 進入或離開DOM所需的毫秒數
-* `unmountOnExit`: 元素消失時，實際上將完全離開DOM
+Wrangler deploys `dist/` using the static-assets configuration in
+`wrangler.toml`.
 
-其餘請參照[官方](http://reactcommunity.org/react-transition-group/css-transition#CSSTransition-props)敘述
-
-example: 
-
-```html
-<CSSTransition
-  in={this.state.example}
-  timeout={300}
-  classNames='example'
-  unmountOnExit
->
+```bash
+npm run deploy
 ```
 
-設定對應的CSS，使用上是在給定的class name加上**後綴**，`enter`, `enter-active`, `exit`, 和 `exit-active`
-
-* `example-enter`: 當props `in`設為*true*時，element會接收到此CSS
-* `example-enter-active`: CSS `example-enter`執行完就會接著新增此CSS，在此設定轉換的行為
-* `example-exit`: 當props `in`設為*false*時，element會接收到此CSS
-* `example-exit-active`: CSS `example-exit`執行完就會接著新增此CSS，在此設定轉換的行為
-
-example:
-
-```CSS
-.cardTransition-enter {
-    height: 0px;
-}
-
-.cardTransition-enter-active {
-    height: 100px;
-    transform: translateY(0%);
-    transition: all 300ms ease;
-}
-
-.cardTransition-exit {
-    height: 100px;
-}
-
-.cardTransition-exit-active {
-    height: 0px;
-    transform: translateY(0%);
-    transition: all 300ms ease;
-}
-```
-
-`*-active` class代表想要用怎樣的動畫來表現，所以宣告出`transition`是很重要的，否則就不會出現想要的轉換效果。
-
-## How to get the `height` of hidden element, and set to animation CSS
-
-在網路上找到一篇[文章](https://medium.com/trabe/measuring-elements-in-react-6bf343b65347)提到解法
-
-底下[留言](https://github.com/gregfleury/react-utils/blob/master/measureElement.js)則提出了另一種方法: 利用`ReactDOM.render()`與`Promise`，先將要測試的hidden element append到一實體DOM上，再去獲取相關值，用非同步方式回傳
-
-example:
-
-```js
-measureElement(
-    <div style={ {width: '100px', height: '50px'} }></div>,
-    id
-).then( ({width, height, id}) => { console.log(width); } )
-
-// console: 50
-```
-
-但如何將獲取到的值(width)，回去設定到CSSTransition動畫的CSS參數中呢...
+GitHub Actions deploys tags matching `main-v*`. The repository must provide a
+`CF_API_TOKEN` secret with permission to deploy the configured Worker and
+routes.
