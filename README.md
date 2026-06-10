@@ -34,6 +34,6 @@ Wrangler deploys `dist/` using the static-assets configuration in
 npm run deploy
 ```
 
-GitHub Actions deploys tags matching `main-v*`. The repository must provide a
-`CF_API_TOKEN` secret with permission to deploy the configured Worker and
-routes.
+GitHub Actions deploys every commit pushed to `master`. The repository must
+provide a `CF_API_TOKEN` secret with permission to deploy the configured Worker
+and routes.
